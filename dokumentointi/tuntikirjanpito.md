@@ -1,1 +1,11 @@
-päivämäärä, käyttämäsi aika ja ajankäytön kohde
+
+14.1.2015, klo 21-01
+Suurin osa ajasta meni kansioiden selvittämiseen, koska tiedostot olivat tallentuneet väärään paikkaan. Tämän takia myös readme-tiedoston löytämiseen ja avaamiseen meni aikaa, minkä vuoksi tein pienen repotreenin useampaan otteeseen. SSH-avaimen luominen onnistui ongelmitta.
+
+15.1.2015, klo 18-23
+Dokumentointikansion ja tiedostojen luominen, lisäksi tiedostojen muokkaaminen. Push ja pull -komentojen harjoittelua ja merge-tilanteiden ratkaisemista. Repoklooniharjoitus ja NetBeans-projektin luominen etenivät sujuvasti. Kalastajapelin rakenne selkiytyi.
+
+16.1.2015, klo 10-11
+Viimeistely
+
+Deadline 1
