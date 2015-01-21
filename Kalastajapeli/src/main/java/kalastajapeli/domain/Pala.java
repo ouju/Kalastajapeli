@@ -1,5 +1,5 @@
 
-package kalastajapeli.kalastajapeli.domain;
+package kalastajapeli.domain;
 
 public class Pala {
     int x;
@@ -16,5 +16,13 @@ public class Pala {
     
     public int getY(){
         return y;
+    }
+    
+    public boolean osuu(Pala toinen){
+        return x==toinen.x && y==toinen.y;
+    }
+    
+    public String toString(){
+        return "("+x+","+y+")";
     }
 }

@@ -1,5 +1,5 @@
 
-package kalastajapeli.kalastajapeli.domain;
+package kalastajapeli.domain;
 
 public class Kenka extends Pala {
     

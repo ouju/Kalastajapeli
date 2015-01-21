@@ -1,13 +1,14 @@
 package kalastajapeli.kalastajapeli;
 
-/**
- * Hello world!
- *
- */
-public class App 
-{
-    public static void main( String[] args )
-    {
-        System.out.println( "Hello World!" );
+import javax.swing.SwingUtilities;
+import kalastajapeli.gui.Kayttoliittyma;
+import kalastajapeli.peli.Kalastajapeli;
+
+public class App {
+    public static void main( String[] args ){
+        Kalastajapeli peli = new Kalastajapeli(20, 20);
+        
+        Kayttoliittyma liittyma = new Kayttoliittyma(peli, 20);
+        
     }
 }
