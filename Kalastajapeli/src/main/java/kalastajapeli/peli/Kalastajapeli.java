@@ -1,4 +1,3 @@
-
 package kalastajapeli.peli;
 
 import java.awt.event.ActionEvent;
@@ -14,33 +13,72 @@ import kalastajapeli.domain.Pala;
 import kalastajapeli.gui.Paivitettava;
 
 public class Kalastajapeli extends Timer implements ActionListener {
+
     private boolean jatkuu;
     private Kalastaja kalastaja;
     private Kala kala;
-    
-    public Kalastajapeli(int leveys, int korkeus){
+    private int korkeus;
+    private int leveys;
+    private Paivitettava paivitettava;
+
+    public Kalastajapeli(int leveys, int korkeus) {
         super(1000, null);
+        this.leveys = leveys;
+        this.korkeus = korkeus;
+        this.jatkuu = true;
+        addActionListener(this);
+        setInitialDelay(2000);
+
+        kalastaja = new Kalastaja(1, korkeus / 2, Suunta.ALAS);
+        uusiKala();
     }
-    public void setKalastaja(Kalastaja kalastaja){
+
+    private void uusiKala() {
+        while (true) {
+            Random random = new Random();
+            kala = new Kala(leveys - 1, random.nextInt(korkeus));
+            if (!kalastaja.osuu(kala)) {
+                break;
+            }
+        }
+    }
+
+    public void setKalastaja(Kalastaja kalastaja) {
         this.kalastaja = kalastaja;
     }
-    public void setKala(Kala kala){
+
+    public void setKala(Kala kala) {
         this.kala = kala;
     }
-    public Kalastaja getKalastaja(){
+
+    public void setPaivitettava(Paivitettava paivitettava) {
+        this.paivitettava = paivitettava;
+    }
+
+    public Kalastaja getKalastaja() {
         return kalastaja;
     }
-    public Kala getKala(){
+
+    public Kala getKala() {
         return kala;
     }
-    public boolean jatkuu(){
+
+    public int getKorkeus() {
+        return korkeus;
+    }
+
+    public int getLeveys() {
+        return leveys;
+    }
+
+    public boolean jatkuu() {
         return jatkuu;
     }
-    
-    public void actionPerformed(ActionEvent ae){
-        if(!jatkuu){
+
+    public void actionPerformed(ActionEvent ae) {
+        if (!jatkuu) {
             return;
         }
-        
+        paivitettava.paivita();
     }
 }
