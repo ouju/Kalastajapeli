@@ -22,7 +22,7 @@ Luokkien luominen NB:ssä, muutaman metodin luominen
 22.1.2015, klo 10-14
 Metodien lisäämistä. Pieni ongelma tuli saada NB luomaan peli-ikkuna, mutta tämä ratkesi pajassa.
 
-23.1.2015, klo 01-02
+23.1.2015, klo 01-03
 Tuntikirjanpidon päivitystä
 
 Deadline 2
