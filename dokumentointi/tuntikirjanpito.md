@@ -11,7 +11,7 @@ Viimeistely
 Deadline 1
 
 19.1.2015, klo 18-20
-Luokkakaavion suunnittelu
+Luokkakaavion suunnittelu. Tallennuksessa ongelmia, mutta lopulta sain sen oikeaan paikkaan.
 
 20.1.2015, klo 16-17
 Luokkakaavion viimeistely
@@ -20,7 +20,7 @@ Luokkakaavion viimeistely
 Luokkien luominen NB:ssä, muutaman metodin luominen
 
 22.1.2015, klo 10-14
-Metodien lisäämistä
+Metodien lisäämistä. Pieni ongelma tuli saada NB luomaan peli-ikkuna, mutta tämä ratkesi pajassa.
 
 23.1.2015, klo 01-02
 Tuntikirjanpidon päivitystä
