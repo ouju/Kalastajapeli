@@ -18,7 +18,11 @@ public class Kalastaja {
         this.palat = new ArrayList<Pala>();
         this.palat.add(new Pala(x, y));
     }
-
+    
+    public List<Pala> getPalat(){
+        return palat;
+    }
+    
     public Suunta getSuunta() {
         return suunta;
     }
