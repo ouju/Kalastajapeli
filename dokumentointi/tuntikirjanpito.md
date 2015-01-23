@@ -9,3 +9,20 @@ Dokumentointikansion ja tiedostojen luominen, lisäksi tiedostojen muokkaaminen.
 Viimeistely
 
 Deadline 1
+
+19.1.2015, klo 18-20
+Luokkakaavion suunnittelu
+
+20.1.2015, klo 16-17
+Luokkakaavion viimeistely
+
+21.1.2015, klo 20-23
+Luokkien luominen NB:ssä, muutaman metodin luominen
+
+22.1.2015, klo 10-14
+Metodien lisäämistä
+
+23.1.2015, klo 01-02
+Tuntikirjanpidon päivitystä
+
+Deadline 2
