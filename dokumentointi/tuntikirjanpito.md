@@ -26,3 +26,6 @@ Metodien lisäämistä. Pieni ongelma tuli saada NB luomaan peli-ikkuna, mutta t
 Tuntikirjanpidon päivitystä
 
 Deadline 2
+
+29.1.2015, klo 17:30-19:30
+Luokkakaavion päivitys ja tuntikirjanpidon täyttö. Ei suurempia ongelmia, vanhoista muistiinpanoista piti hieman kerrata miten merkinnät menevät luokkakaaviossa
