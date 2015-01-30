@@ -52,12 +52,12 @@
                 <version>0.30</version>
                 <configuration>
                     <targetClasses>
-                        <param>kalastajapeli.kalastajapeli.logiikka.*</param>
                         <param>kalastajapeli.kalastajapeli.*</param>
+                        <param>kalastajapeli.*</param>
                     </targetClasses>
                     <targetTests>
-                        <param>kalastajapeli.kalastajapeli.logiikka.*</param>
                         <param>kalastajapeli.kalastajapeli.*</param>
+                        <param>kalastajapeli.*</param>
                     </targetTests>
                 </configuration>
             </plugin>
