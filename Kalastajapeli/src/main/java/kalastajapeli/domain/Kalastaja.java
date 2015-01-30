@@ -17,7 +17,15 @@ public class Kalastaja {
         this.palat = new ArrayList<Pala>();
         this.palat.add(new Pala(x, y));
     }
-
+    public int getX(){
+        return x;
+    }
+    public void setX(int x){
+        this.x = x;
+    }
+    public int getY(){
+        return y;
+    }
     public List<Pala> getPalat() {
         return palat;
     }
@@ -40,15 +48,15 @@ public class Kalastaja {
     }
 
     public void liiku() {
-        //int uusiX = palat.get(palat.size() - 1).getX();
-        //int uusiY = palat.get(palat.size() - 1).getY();
+        int uusiX = palat.get(palat.size() - 1).getX();
+        int uusiY = palat.get(palat.size() - 1).getY();
 
         if (suunta == Suunta.ALAS) {
-            y = y+100;
+            uusiY++;
         } else if (suunta == Suunta.YLOS) {
-            y = y-100;
+            uusiY--;
         }
         palat.remove(0);
-        palat.add(new Pala(x, y));
+        palat.add(new Pala(uusiX, uusiY));
     }
 }

@@ -11,16 +11,18 @@ public class Kala extends Pala {
     public Kala(int x, int y, Suunta suunta) {
         super(x, y);
         this.suunta = Suunta.VASEN;
-    }/*
+        this.palat = new ArrayList<Pala>();
+        this.palat.add(new Pala(x, y));
+    }
     public void liiku() {
-        int uusiX = palat.get(palat.size() -1).getX();
-        int uusiY = palat.get(palat.size() -1).getY();
+        //int uusiX = palat.get(palat.size() - 1).getX();
+        //int uusiY = palat.get(palat.size() - 1).getY();
 
         if (suunta == Suunta.VASEN) {
-            uusiX--;
+            x--;
         }
-        palat.remove(0);
-        palat.add(new Pala(uusiX, uusiY));
+        //palat.remove(0);
+        palat.add(new Pala(x, y));
     }
-    */
+    
 }

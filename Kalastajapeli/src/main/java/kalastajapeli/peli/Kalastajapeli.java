@@ -79,8 +79,17 @@ public class Kalastajapeli extends Timer implements ActionListener {
         if (!jatkuu) {
             return;
         }
+        kala.liiku();
         kalastaja.liiku();
         paivitettava.paivita();
     }
-    
+
+    private boolean kalastajaOsuuLaitaan() {
+        for (Pala p : kalastaja.getPalat()) {
+            if (p.getY() == korkeus || p.getX() == leveys || p.getX() == -1 || p.getY() == -1) {
+                return true;
+            }
+        }
+        return false;
+    }
 }
