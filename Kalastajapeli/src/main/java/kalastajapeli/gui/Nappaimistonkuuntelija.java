@@ -13,10 +13,8 @@ public class Nappaimistonkuuntelija implements KeyListener {
         this.kalastaja = kalastaja;
     }
 
+    @Override
     public void keyTyped(KeyEvent ke) {
-    }
-
-    public void keyPressed(KeyEvent ke) {
         if (ke.getKeyCode() == KeyEvent.VK_UP) {
             kalastaja.setSuunta(Suunta.YLOS);
         }
@@ -25,6 +23,12 @@ public class Nappaimistonkuuntelija implements KeyListener {
         }
     }
 
+    @Override
+    public void keyPressed(KeyEvent ke) {
+        
+    }
+
+    @Override
     public void keyReleased(KeyEvent ke) {
     }
 }

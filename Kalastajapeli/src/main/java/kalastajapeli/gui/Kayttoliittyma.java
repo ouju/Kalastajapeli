@@ -20,8 +20,8 @@ public class Kayttoliittyma implements Runnable {
 
     public void run() {
         frame = new JFrame("Kalastajapeli");
-        int leveys = (peli.getLeveys() - 1) * sivunPituus + 10;
-        int korkeus = (peli.getKorkeus() - 1) * sivunPituus + 10;
+        int leveys = (peli.getLeveys() + 1) * sivunPituus + 10;
+        int korkeus = (peli.getKorkeus() + 2) * sivunPituus + 10;
 
         frame.setPreferredSize(new Dimension(leveys, korkeus));
         frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);

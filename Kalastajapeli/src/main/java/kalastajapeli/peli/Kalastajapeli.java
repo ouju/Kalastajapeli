@@ -29,14 +29,14 @@ public class Kalastajapeli extends Timer implements ActionListener {
         addActionListener(this);
         setInitialDelay(2000);
 
-        kalastaja = new Kalastaja(1, korkeus / 2, Suunta.ALAS);
+        kalastaja = new Kalastaja(1, korkeus / 2);
         uusiKala();
     }
 
     private void uusiKala() {
         while (true) {
             Random random = new Random();
-            kala = new Kala(leveys - 1, random.nextInt(korkeus));
+            kala = new Kala(leveys, random.nextInt(korkeus), Suunta.VASEN);
             if (!kalastaja.osuu(kala)) {
                 break;
             }
@@ -79,6 +79,8 @@ public class Kalastajapeli extends Timer implements ActionListener {
         if (!jatkuu) {
             return;
         }
+        kalastaja.liiku();
         paivitettava.paivita();
     }
+    
 }

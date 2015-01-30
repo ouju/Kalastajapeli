@@ -11,18 +11,17 @@ public class Kalastaja {
     private int y;
     private Suunta suunta;
 
-    public Kalastaja(int x, int y, Suunta suunta) {
-        this.x = 1;
+    public Kalastaja(int x, int y) {
+        this.x = x;
         this.y = y;
-        this.suunta = suunta;
         this.palat = new ArrayList<Pala>();
         this.palat.add(new Pala(x, y));
     }
-    
-    public List<Pala> getPalat(){
+
+    public List<Pala> getPalat() {
         return palat;
     }
-    
+
     public Suunta getSuunta() {
         return suunta;
     }
@@ -38,5 +37,18 @@ public class Kalastaja {
             }
         }
         return false;
+    }
+
+    public void liiku() {
+        //int uusiX = palat.get(palat.size() - 1).getX();
+        //int uusiY = palat.get(palat.size() - 1).getY();
+
+        if (suunta == Suunta.ALAS) {
+            y = y+100;
+        } else if (suunta == Suunta.YLOS) {
+            y = y-100;
+        }
+        palat.remove(0);
+        palat.add(new Pala(x, y));
     }
 }
