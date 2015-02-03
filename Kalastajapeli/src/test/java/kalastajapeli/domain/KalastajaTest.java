@@ -39,21 +39,21 @@ public class KalastajaTest {
 
     @Test
     public void getSuuntaPalauttaaAlasKunKalastajanSuuntaOnAlas() {
-        Kalastaja kalastaja = new Kalastaja(1,1,Suunta.ALAS);
+        Kalastaja kalastaja = new Kalastaja(1,1, Suunta.ALAS);
         Suunta vastaus = kalastaja.getSuunta();
         assertEquals(vastaus,Suunta.ALAS);
     }
     
     @Test
     public void getSuuntaPalauttaaYlosKunKalastajanSuuntaOnYlos() {
-        Kalastaja kalastaja = new Kalastaja(1,1,Suunta.YLOS);
+        Kalastaja kalastaja = new Kalastaja(1,1, Suunta.YLOS);
         Suunta vastaus = kalastaja.getSuunta();
         assertEquals(vastaus,Suunta.YLOS);
     }
     
     @Test
     public void kalastajanSuuntaOnAlasKunSeVaihdetaanAlas() {
-        Kalastaja kalastaja = new Kalastaja(1,1,Suunta.YLOS);
+        Kalastaja kalastaja = new Kalastaja(1,1, Suunta.YLOS);
         kalastaja.setSuunta(Suunta.ALAS);
         Suunta vastaus = kalastaja.getSuunta();
         assertEquals(vastaus,Suunta.ALAS);
@@ -61,7 +61,7 @@ public class KalastajaTest {
     
     @Test
     public void kalastajanSuuntaOnYlosKunSeVaihdetaanYlos() {
-        Kalastaja kalastaja = new Kalastaja(1,1,Suunta.ALAS);
+        Kalastaja kalastaja = new Kalastaja(1,1, Suunta.ALAS);
         kalastaja.setSuunta(Suunta.YLOS);
         Suunta vastaus = kalastaja.getSuunta();
         assertEquals(vastaus,Suunta.YLOS);

@@ -29,7 +29,7 @@ public class Kalastajapeli extends Timer implements ActionListener {
         addActionListener(this);
         setInitialDelay(2000);
 
-        kalastaja = new Kalastaja(1, korkeus / 2);
+        kalastaja = new Kalastaja(1, korkeus / 2, Suunta.ALAS);
         uusiKala();
     }
 
@@ -38,6 +38,9 @@ public class Kalastajapeli extends Timer implements ActionListener {
             Random random = new Random();
             kala = new Kala(leveys, random.nextInt(korkeus), Suunta.VASEN);
             if (!kalastaja.osuu(kala)) {
+                break;
+            }
+            if (kalaOsuuVasempaanLaitaan()) {
                 break;
             }
         }
@@ -80,16 +83,36 @@ public class Kalastajapeli extends Timer implements ActionListener {
             return;
         }
         kala.liiku();
+
         kalastaja.liiku();
+        if (kalastajaOsuuLaitaan()) {
+            if (kalastaja.getSuunta() == Suunta.ALAS) {
+                kalastaja.setSuunta(Suunta.YLOS);
+            } else {
+                kalastaja.setSuunta(Suunta.ALAS);
+            }
+        }
         paivitettava.paivita();
+        setDelay(500);
+        
+    }
+
+    private boolean kalaOsuuVasempaanLaitaan() {
+        if (kala.getX() == -1) {
+            return true;
+        }
+        return false;
     }
 
     private boolean kalastajaOsuuLaitaan() {
-        for (Pala p : kalastaja.getPalat()) {
+        if(kalastaja.getY() == korkeus || kalastaja.getX() == leveys || kalastaja.getX() == -1 || kalastaja.getY() == -1){
+            return true;
+        }
+        /*for (Pala p : kalastaja.getPalat()) {
             if (p.getY() == korkeus || p.getX() == leveys || p.getX() == -1 || p.getY() == -1) {
                 return true;
             }
-        }
+        }*/
         return false;
     }
 }
