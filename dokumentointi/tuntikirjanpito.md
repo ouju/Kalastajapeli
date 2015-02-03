@@ -34,3 +34,9 @@ Luokkakaavion päivitys ja tuntikirjanpidon täyttö. Ei suurempia ongelmia, van
 Koodin jatkamista, lähes koko aika meni sen selvittämiseen, kuinka saan kalan ja kalastajan liikkumaan haluamallani tavalla
 
 Deadline 3 (viivästyi päivällä)
+
+2.2.2015, klo 19-21
+Koodiketselmointia. Koodi oli melko lyhyt ja oikein hyvin tehty, joten rakentavaa kritiikkiä oli vaikea löytää. Kokemus oli kuitenkin opettavainen, sillä siinä tuli muisteltua Clean Code -sääntöjä
+
+3.2.2015, klo 22-00
+Koodin laadun parantamista, turhien asioiden poistoa. Koodi muuttui huomattavasti luettavammaksi ilman turhaa krääsää, mutta valitettavasti itse peli ei vielä edennyt paljoa.
