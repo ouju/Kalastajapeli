@@ -45,10 +45,10 @@ public class KalastajaTest {
     }
     
     @Test
-    public void getSuuntaPalauttaaYlosKunKalastajanSuuntaOnYlos() {
+    public void getSuuntaAlussaPalauttaaAlasVaikkaKalastajanSuuntaOnYlos() {
         Kalastaja kalastaja = new Kalastaja(1,1, Suunta.YLOS);
         Suunta vastaus = kalastaja.getSuunta();
-        assertEquals(vastaus,Suunta.YLOS);
+        assertEquals(vastaus,Suunta.ALAS);
     }
     
     @Test
@@ -65,5 +65,18 @@ public class KalastajaTest {
         kalastaja.setSuunta(Suunta.YLOS);
         Suunta vastaus = kalastaja.getSuunta();
         assertEquals(vastaus,Suunta.YLOS);
+    }
+    @Test
+    public void getXToimii(){
+        Kalastaja kalastaja = new Kalastaja(1,1, Suunta.ALAS);
+        int vastaus = kalastaja.getX();
+        assertEquals(vastaus, 1);
+    }
+    @Test
+    public void setXToimii(){
+        Kalastaja kalastaja = new Kalastaja(1,1, Suunta.ALAS);
+        kalastaja.setX(2);
+        int vastaus = kalastaja.getX();
+        assertEquals(vastaus, 2);
     }
 }

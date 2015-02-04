@@ -12,7 +12,6 @@ public class Kalastaja {
     private Suunta suunta;
 
     public Kalastaja(int x, int y, Suunta suunta) {
-        suunta = suunta;
         this.x = x;
         this.y = y;
         //this.palat = new ArrayList<Pala>();
