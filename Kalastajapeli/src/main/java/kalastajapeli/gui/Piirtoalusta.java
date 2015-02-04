@@ -26,6 +26,10 @@ public class Piirtoalusta extends JPanel implements Paivitettava {
         super.paintComponent(g);
         g.setColor(Color.BLUE);
         for (Kala k : peli.getKala()) {
+            g.fillOval(sivu * k.getX(), sivu * k.getY(), sivu+10, sivu);
+        }
+        g.setColor(Color.GRAY);
+        for (Kenka k : peli.getKenka()) {
             g.fillOval(sivu * k.getX(), sivu * k.getY(), sivu, sivu + 10);
         }
         g.setColor(Color.BLACK);

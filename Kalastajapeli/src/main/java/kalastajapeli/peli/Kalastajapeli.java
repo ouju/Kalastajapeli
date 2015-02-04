@@ -18,6 +18,7 @@ public class Kalastajapeli extends Timer implements ActionListener {
     private boolean jatkuu;
     private Kalastaja kalastaja;
     private ArrayList<Kala> kalat;
+    private ArrayList<Kenka> kengat;
     private int korkeus;
     private int leveys;
     private Paivitettava paivitettava;
@@ -25,19 +26,24 @@ public class Kalastajapeli extends Timer implements ActionListener {
 
     public Kalastajapeli(int leveys, int korkeus) {
         super(1000, null);
-        this.paivitysmaara=0;
+        this.paivitysmaara = 0;
         this.kalat = new ArrayList<Kala>();
+        this.kengat = new ArrayList<Kenka>();
         this.leveys = leveys;
         this.korkeus = korkeus;
         this.jatkuu = true;
         addActionListener(this);
         setInitialDelay(2000);
-        
+
         kalastaja = new Kalastaja(1, korkeus / 2, Suunta.ALAS);
-        uusiKala();
-        uusiKala();
+
     }
-    
+
+    private void uusiKenka() {
+        Random random = new Random();
+        kengat.add(new Kenka(leveys, random.nextInt(korkeus), Suunta.VASEN));
+    }
+
     private void uusiKala() {
         // while (true) {
 
@@ -71,6 +77,10 @@ public class Kalastajapeli extends Timer implements ActionListener {
         return kalat;
     }
 
+    public ArrayList<Kenka> getKenka() {
+        return kengat;
+    }
+
     public int getKorkeus() {
         return korkeus;
     }
@@ -92,8 +102,14 @@ public class Kalastajapeli extends Timer implements ActionListener {
         for (Kala k : kalat) {
             k.liiku();
         }
-        if(paivitysmaara%5==0){
+        for (Kenka k : kengat) {
+            k.liiku();
+        }
+        if (paivitysmaara % 5 == 0) {
             uusiKala();
+        }
+        if (paivitysmaara % 10 == 0) {
+            uusiKenka();
         }
         kalastaja.liiku();
         if (kalastajaOsuuLaitaan()) {
