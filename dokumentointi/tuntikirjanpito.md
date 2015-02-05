@@ -49,3 +49,6 @@ Testien kirjottelua, ei ongelmia
 
 5.2.2015, klo 14-16
 Lisää testejä
+
+5.2.2015, klo 21-23
+Lisää testejä
