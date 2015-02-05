@@ -40,3 +40,12 @@ Koodiketselmointia. Koodi oli melko lyhyt ja oikein hyvin tehty, joten rakentava
 
 3.2.2015, klo 22-00
 Koodin laadun parantamista, turhien asioiden poistoa. Koodi muuttui huomattavasti luettavammaksi ilman turhaa krääsää, mutta valitettavasti itse peli ei vielä edennyt paljoa.
+
+4.2.2015, klo 14-16
+Pajassa selvittämässä kalojen luontia. Oli ongelmia miten luoda kala joka viides sekunti, mutta homma ratkesi pajassa
+
+4.2.2015, klo 22-01
+Testien kirjottelua, ei ongelmia
+
+5.2.2015, klo 14-16
+Lisää testejä
