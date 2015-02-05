@@ -92,7 +92,6 @@ public class Kalastajapeli extends Timer implements ActionListener {
     public boolean jatkuu() {
         return jatkuu;
     }
-    //Timer timer = new Timer(1000, new ActionListener() {
 
     @Override
     public void actionPerformed(ActionEvent ae) {
@@ -137,11 +136,6 @@ public class Kalastajapeli extends Timer implements ActionListener {
         if (kalastaja.getY() == korkeus || kalastaja.getX() == leveys || kalastaja.getX() == -1 || kalastaja.getY() == -1) {
             return true;
         }
-        /*for (Pala p : kalastaja.getPalat()) {
-         if (p.getY() == korkeus || p.getX() == leveys || p.getX() == -1 || p.getY() == -1) {
-         return true;
-         }
-         }*/
         return false;
     }
 }

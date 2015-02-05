@@ -39,8 +39,8 @@
                 <configuration>
                     <instrumentation>
                         <includes>
-                            <include>kalastajapeli.logiikka/*.class</include>
-                            <include>kalastajapeli.tekoaly/*.class</include>
+                            <include>kalastajapeli.domain.*</include>
+                            <include>kalastajapeli.peli.*</include>
                         </includes>
                     </instrumentation>
                 </configuration>

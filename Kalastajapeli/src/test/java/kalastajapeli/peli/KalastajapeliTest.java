@@ -105,16 +105,15 @@ public class KalastajapeliTest {
         assertEquals(vastaus,true);
     }
     
-    /*@Test
+    @Test
     public void kalaOsuuVasempaanLaitaanPalauttaaTrue(){
-        Kalastajapeli peli = new Kalastajapeli(10, 20);
-        Kala kala = new Kala(-1,1,Suunta.VASEN);
-        ArrayList<Kala> k = new ArrayList<>();
-        k.add(kala);
+        Kalastajapeli peli = new Kalastajapeli(0, 20);
         peli.uusiKala();
+        Kala k = peli.getKala().get(0);
+        k.liiku();
         boolean vastaus = peli.kalaOsuuVasempaanLaitaan();
         assertEquals(vastaus,true);
-    }*/
+    }
     
     @Test
     public void kalaOsuuVasempaanLaitaanPalauttaaFalse(){
