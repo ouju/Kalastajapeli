@@ -14,6 +14,10 @@ public class Kenka extends Pala {
         this.palat = new ArrayList<Pala>();
         this.palat.add(new Pala(x, y));
     }
+    
+    public Suunta getSuunta(){
+        return suunta;
+    }
 
     public void liiku() {
         //int uusiX = palat.get(palat.size() - 1).getX();

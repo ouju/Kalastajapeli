@@ -108,7 +108,7 @@ public class Kalastajapeli extends Timer implements ActionListener {
         if (paivitysmaara % 5 == 0) {
             uusiKala();
         }
-        if (paivitysmaara % 10 == 0) {
+        if (paivitysmaara % 9 == 0) {
             uusiKenka();
         }
         kalastaja.liiku();

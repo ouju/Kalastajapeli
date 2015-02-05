@@ -18,9 +18,9 @@ public class Kala extends Pala {
         //int uusiX = palat.get(palat.size() - 1).getX();
         //int uusiY = palat.get(palat.size() - 1).getY();
 
-        if (suunta == Suunta.VASEN) {
+        //if (suunta == Suunta.VASEN) {
             x--;
-        }
+        //}
         //palat.remove(0);
         palat.add(new Pala(x, y));
     }
