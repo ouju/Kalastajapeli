@@ -52,12 +52,12 @@
                 <version>0.30</version>
                 <configuration>
                     <targetClasses>
-                        <param>kalastajapeli.kalastajapeli.*</param>
-                        <param>kalastajapeli.*</param>
+                        <param>kalastajapeli.domain.*</param>
+                        <param>kalastajapeli.peli.*</param>
                     </targetClasses>
                     <targetTests>
-                        <param>kalastajapeli.kalastajapeli.*</param>
-                        <param>kalastajapeli.*</param>
+                        <param>kalastajapeli.domain.*</param>
+                        <param>kalastajapeli.peli.*</param>
                     </targetTests>
                 </configuration>
             </plugin>

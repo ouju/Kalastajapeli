@@ -39,12 +39,12 @@ public class Kalastajapeli extends Timer implements ActionListener {
 
     }
 
-    private void uusiKenka() {
+    public void uusiKenka() {
         Random random = new Random();
         kengat.add(new Kenka(leveys, random.nextInt(korkeus), Suunta.VASEN));
     }
 
-    private void uusiKala() {
+    public void uusiKala() {
         // while (true) {
 
         Random random = new Random();
@@ -124,7 +124,7 @@ public class Kalastajapeli extends Timer implements ActionListener {
         paivitysmaara++;
     }
 
-    private boolean kalaOsuuVasempaanLaitaan() {
+    public boolean kalaOsuuVasempaanLaitaan() {
         for (Kala k : kalat) {
             if (k.getX() == -1) {
                 return true;
@@ -133,7 +133,7 @@ public class Kalastajapeli extends Timer implements ActionListener {
         return false;
     }
 
-    private boolean kalastajaOsuuLaitaan() {
+    public boolean kalastajaOsuuLaitaan() {
         if (kalastaja.getY() == korkeus || kalastaja.getX() == leveys || kalastaja.getX() == -1 || kalastaja.getY() == -1) {
             return true;
         }

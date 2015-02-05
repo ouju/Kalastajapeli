@@ -37,4 +37,11 @@ public class KenkaTest {
         int vastaus = k.getX();
         assertEquals(vastaus, 1);
     }
+    
+    @Test
+    public void getSuuntaToimii(){
+        Kenka k = new Kenka(2,1,Suunta.VASEN);
+        Suunta vastaus = k.getSuunta();
+        assertEquals(vastaus, Suunta.VASEN);
+    }
 }
