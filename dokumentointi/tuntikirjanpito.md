@@ -51,4 +51,9 @@ Testien kirjottelua, ei ongelmia
 Lisää testejä
 
 5.2.2015, klo 21-23
-Lisää testejä
+Lisää testejä. Kaikkia testejä en saanut tehtyä, koska kävi ilmi että projektissani on käyttöliittymää ja logiikkaa sekaisin. Tämän aion korjata heti päästessäni pajaan.
+
+6.2.2015, klo 00-03
+Javadociin perehtymistä, ja kommenttien lisääminen projektiin. Hieman epäselväksi jäi, mille kaikelle piti kirjoittaa javadoc, mutta tein kaikelle mille omasta mielestäni piti.
+
+Deadline 4
