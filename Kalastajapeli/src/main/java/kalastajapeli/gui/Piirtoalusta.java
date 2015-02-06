@@ -8,6 +8,9 @@ import kalastajapeli.domain.Kenka;
 import kalastajapeli.domain.Pala;
 import kalastajapeli.peli.Kalastajapeli;
 
+//Käyttöliittymästä sanottiin ircissä ettei tarvitse tehdä javadocia?
+//Siksi tässä paketissa ei niitä ole, eikä kalastajapeli.kalastajapeli
+//-paketissa
 public class Piirtoalusta extends JPanel implements Paivitettava {
 
     private Kalastajapeli peli;
@@ -26,7 +29,7 @@ public class Piirtoalusta extends JPanel implements Paivitettava {
         super.paintComponent(g);
         g.setColor(Color.BLUE);
         for (Kala k : peli.getKala()) {
-            g.fillOval(sivu * k.getX(), sivu * k.getY(), sivu+10, sivu);
+            g.fillOval(sivu * k.getX(), sivu * k.getY(), sivu + 10, sivu);
         }
         g.setColor(Color.GRAY);
         for (Kenka k : peli.getKenka()) {

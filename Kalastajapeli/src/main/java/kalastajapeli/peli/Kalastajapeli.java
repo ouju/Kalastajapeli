@@ -13,6 +13,10 @@ import kalastajapeli.domain.Pala;
 import kalastajapeli.gui.Paivitettava;
 import javax.swing.*;
 
+/**
+ *
+ * @author Outi
+ */
 public class Kalastajapeli extends Timer implements ActionListener {
 
     private boolean jatkuu;
@@ -24,6 +28,14 @@ public class Kalastajapeli extends Timer implements ActionListener {
     private Paivitettava paivitettava;
     private int paivitysmaara;
 
+    /**
+     * Konstruktori määrittää ikkunalle leveyden ja korkeuden ja muuttujat, luo
+     * alas päin kulkevan kalastajan vasempaan yläkulmaan ja kutsuu
+     * actionPerformed-metodia
+     *
+     * @param leveys Peli-ikkunan leveys
+     * @param korkeus Peli-kkunan korkeus
+     */
     public Kalastajapeli(int leveys, int korkeus) {
         super(1000, null);
         this.paivitysmaara = 0;
@@ -33,17 +45,27 @@ public class Kalastajapeli extends Timer implements ActionListener {
         this.korkeus = korkeus;
         this.jatkuu = true;
         addActionListener(this);
-        setInitialDelay(2000);
+        //setInitialDelay(2000);
 
-        kalastaja = new Kalastaja(1, korkeus / 2, Suunta.ALAS);
+        kalastaja = new Kalastaja(1, 1, Suunta.ALAS);
 
     }
 
+    /**
+     * Metodi luo uuden kengän ikkunan oikeaan laitaan, arpoo korkeuden ja
+     * määrittää suunnaksi vasen
+     *
+     */
     public void uusiKenka() {
         Random random = new Random();
         kengat.add(new Kenka(leveys, random.nextInt(korkeus), Suunta.VASEN));
     }
 
+    /**
+     * Metodi luo uuden kalan ikkunan oikeaan laitaan, arpoo korkeuden ja
+     * määrittää suunnaksi vasen
+     *
+     */
     public void uusiKala() {
         // while (true) {
 
@@ -58,6 +80,10 @@ public class Kalastajapeli extends Timer implements ActionListener {
         //  }
     }
 
+    /**
+     *
+     * @param kalastaja
+     */
     public void setKalastaja(Kalastaja kalastaja) {
         this.kalastaja = kalastaja;
     }
@@ -65,30 +91,59 @@ public class Kalastajapeli extends Timer implements ActionListener {
     /*   public void setKala(Kala kala) {
      this.kala = kala;
      }*/
+    /**
+     *
+     * @param paivitettava
+     */
     public void setPaivitettava(Paivitettava paivitettava) {
         this.paivitettava = paivitettava;
     }
 
+    /**
+     *
+     * @return
+     */
     public Kalastaja getKalastaja() {
         return kalastaja;
     }
 
+    /**
+     *
+     * @return
+     */
     public ArrayList<Kala> getKala() {
         return kalat;
     }
 
+    /**
+     *
+     * @return
+     */
     public ArrayList<Kenka> getKenka() {
         return kengat;
     }
 
+    /**
+     *
+     * @return
+     */
     public int getKorkeus() {
         return korkeus;
     }
 
+    /**
+     *
+     * @return
+     */
     public int getLeveys() {
         return leveys;
     }
 
+    /**
+     * Metodi määrittää suoritetaanko actionPerformed-metodi
+     *
+     * @return jatkumisen totuusarvo
+     */
     public boolean jatkuu() {
         return jatkuu;
     }
@@ -123,6 +178,11 @@ public class Kalastajapeli extends Timer implements ActionListener {
         paivitysmaara++;
     }
 
+    /**
+     * Metodi tarkistaa milloin kala saavuttaa vasemman laidan
+     *
+     * @return osumisen totuusarvo
+     */
     public boolean kalaOsuuVasempaanLaitaan() {
         for (Kala k : kalat) {
             if (k.getX() == -1) {
@@ -132,8 +192,13 @@ public class Kalastajapeli extends Timer implements ActionListener {
         return false;
     }
 
+    /**
+     * Metodi tarkistaa osuuko kalastaja ylä- tai alalaitaan
+     *
+     * @return osumisen totuusarvo
+     */
     public boolean kalastajaOsuuLaitaan() {
-        if (kalastaja.getY() == korkeus || kalastaja.getX() == leveys || kalastaja.getX() == -1 || kalastaja.getY() == -1) {
+        if (kalastaja.getY() == korkeus || kalastaja.getY() == -1) {
             return true;
         }
         return false;

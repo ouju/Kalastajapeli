@@ -5,6 +5,9 @@ import java.awt.event.KeyListener;
 import kalastajapeli.kalastajapeli.Suunta;
 import kalastajapeli.domain.Kalastaja;
 
+//Käyttöliittymästä sanottiin ircissä ettei tarvitse tehdä javadocia?
+//Siksi tässä paketissa ei niitä ole, eikä kalastajapeli.kalastajapeli
+//-paketissa
 public class Nappaimistonkuuntelija implements KeyListener {
 
     Kalastaja kalastaja;
@@ -15,7 +18,6 @@ public class Nappaimistonkuuntelija implements KeyListener {
 
     @Override
     public void keyTyped(KeyEvent ke) {
-        
     }
 
     @Override

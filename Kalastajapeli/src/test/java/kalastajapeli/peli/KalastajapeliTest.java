@@ -128,7 +128,7 @@ public class KalastajapeliTest {
     @Test
     public void kalastajaOsuuLaitaanPalauttaaTrue(){
         Kalastajapeli peli = new Kalastajapeli(10, 20);
-        Kalastaja k = new Kalastaja(-1,1, Suunta.ALAS);
+        Kalastaja k = new Kalastaja(1,-1, Suunta.ALAS);
         peli.setKalastaja(k);
         boolean vastaus = peli.kalastajaOsuuLaitaan();
         assertEquals(vastaus, true);

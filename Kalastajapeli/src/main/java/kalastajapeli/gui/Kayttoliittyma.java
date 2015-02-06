@@ -6,6 +6,9 @@ import javax.swing.JFrame;
 import javax.swing.WindowConstants;
 import kalastajapeli.peli.Kalastajapeli;
 
+//Käyttöliittymästä sanottiin ircissä ettei tarvitse tehdä javadocia?
+//Siksi tässä paketissa ei niitä ole, eikä kalastajapeli.kalastajapeli
+//-paketissa
 public class Kayttoliittyma implements Runnable {
 
     private Kalastajapeli peli;
