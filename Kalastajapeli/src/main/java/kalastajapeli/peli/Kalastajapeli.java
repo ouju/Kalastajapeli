@@ -5,12 +5,12 @@ import java.awt.event.ActionListener;
 import java.util.ArrayList;
 import java.util.Random;
 import javax.swing.Timer;
-import kalastajapeli.kalastajapeli.Suunta;
-import kalastajapeli.domain.Kalastaja;
-import kalastajapeli.domain.Kala;
-import kalastajapeli.domain.Kenka;
-import kalastajapeli.domain.Pala;
-import kalastajapeli.gui.Paivitettava;
+import kalastajapeli.oliot.Suunta;
+import kalastajapeli.oliot.Kalastaja;
+import kalastajapeli.oliot.Kala;
+import kalastajapeli.oliot.Kenka;
+import kalastajapeli.oliot.Pala;
+import kalastajapeli.kayttoliittyma.Paivitettava;
 import javax.swing.*;
 
 /**
@@ -27,6 +27,7 @@ public class Kalastajapeli extends Timer implements ActionListener {
     private int leveys;
     private Paivitettava paivitettava;
     private int paivitysmaara;
+    private Pala kala;
 
     /**
      * Konstruktori määrittää ikkunalle leveyden ja korkeuden ja muuttujat, luo
@@ -68,11 +69,13 @@ public class Kalastajapeli extends Timer implements ActionListener {
      */
     public void uusiKala() {
         // while (true) {
-
+        do {
         Random random = new Random();
-        kalat.add(new Kala(leveys, random.nextInt(korkeus), Suunta.VASEN));
-        /*  if (!kalastaja.osuu(kala)) {
-         break;
+        Kala kala = new Kala(leveys, random.nextInt(korkeus), Suunta.VASEN);
+        kalat.add(kala);
+        }while (kalastaja.osuu(kala));
+        
+        /* break;
          }
          if (kalaOsuuVasempaanLaitaan()) {
          break;

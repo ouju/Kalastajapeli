@@ -2,11 +2,11 @@ package kalastajapeli.peli;
 
 import java.util.ArrayList;
 import java.util.Random;
-import kalastajapeli.domain.Kala;
-import kalastajapeli.domain.Kalastaja;
-import kalastajapeli.domain.Kenka;
-import kalastajapeli.gui.Paivitettava;
-import kalastajapeli.kalastajapeli.Suunta;
+import kalastajapeli.oliot.Kala;
+import kalastajapeli.oliot.Kalastaja;
+import kalastajapeli.oliot.Kenka;
+import kalastajapeli.kayttoliittyma.Paivitettava;
+import kalastajapeli.oliot.Suunta;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;

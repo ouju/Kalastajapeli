@@ -1,13 +1,13 @@
-package kalastajapeli.kalastajapeli;
+package kalastajapeli.main;
 
 import javax.swing.SwingUtilities;
-import kalastajapeli.gui.Kayttoliittyma;
+import kalastajapeli.kayttoliittyma.Kayttoliittyma;
 import kalastajapeli.peli.Kalastajapeli;
 
 //Käyttöliittymästä sanottiin ircissä ettei tarvitse tehdä javadocia?
 //Siksi tässä paketissa ei niitä ole, eikä kalastajapeli.gui
 //-paketissa
-public class App {
+public class Main {
 
     public static void main(String[] args) {
         Kalastajapeli peli = new Kalastajapeli(30, 20);

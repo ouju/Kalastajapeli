@@ -1,4 +1,4 @@
-package kalastajapeli.gui;
+package kalastajapeli.kayttoliittyma;
 
 import java.awt.Container;
 import java.awt.Dimension;

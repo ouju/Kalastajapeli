@@ -1,8 +1,7 @@
-package kalastajapeli.domain;
+package kalastajapeli.oliot;
 
 import java.util.ArrayList;
 import java.util.List;
-import kalastajapeli.kalastajapeli.Suunta;
 
 /**
  * Luokka määrittää, palauttaa ja asettaa kalastajan sijainnin ja suunnan,

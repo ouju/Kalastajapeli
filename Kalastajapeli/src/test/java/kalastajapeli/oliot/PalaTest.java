@@ -1,6 +1,7 @@
 
-package kalastajapeli.domain;
+package kalastajapeli.oliot;
 
+import kalastajapeli.oliot.Pala;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;

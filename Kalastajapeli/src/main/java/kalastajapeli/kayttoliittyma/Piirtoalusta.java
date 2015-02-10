@@ -1,11 +1,11 @@
-package kalastajapeli.gui;
+package kalastajapeli.kayttoliittyma;
 
 import java.awt.Color;
 import java.awt.Graphics;
 import javax.swing.JPanel;
-import kalastajapeli.domain.Kala;
-import kalastajapeli.domain.Kenka;
-import kalastajapeli.domain.Pala;
+import kalastajapeli.oliot.Kala;
+import kalastajapeli.oliot.Kenka;
+import kalastajapeli.oliot.Pala;
 import kalastajapeli.peli.Kalastajapeli;
 
 //Käyttöliittymästä sanottiin ircissä ettei tarvitse tehdä javadocia?
@@ -21,10 +21,12 @@ public class Piirtoalusta extends JPanel implements Paivitettava {
         this.sivu = palanSivunPituus;
     }
 
+    @Override
     public void paivita() {
         repaint();
     }
 
+    @Override
     public void paintComponent(Graphics g) {
         super.paintComponent(g);
         g.setColor(Color.BLUE);

@@ -1,7 +1,6 @@
-package kalastajapeli.domain;
+package kalastajapeli.oliot;
 
 import java.util.ArrayList;
-import kalastajapeli.kalastajapeli.Suunta;
 
 /**
  * Luokka määrittelee kengän ja sen liikkumismetodin

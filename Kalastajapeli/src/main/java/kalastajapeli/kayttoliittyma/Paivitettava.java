@@ -1,4 +1,4 @@
-package kalastajapeli.gui;
+package kalastajapeli.kayttoliittyma;
 
 //Käyttöliittymästä sanottiin ircissä ettei tarvitse tehdä javadocia?
 //Siksi tässä paketissa ei niitä ole, eikä kalastajapeli.kalastajapeli

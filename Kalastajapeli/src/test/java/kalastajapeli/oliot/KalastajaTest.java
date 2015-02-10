@@ -2,9 +2,11 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-package kalastajapeli.domain;
+package kalastajapeli.oliot;
 
-import kalastajapeli.kalastajapeli.Suunta;
+import kalastajapeli.oliot.Kalastaja;
+import kalastajapeli.oliot.Pala;
+import kalastajapeli.oliot.Suunta;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;

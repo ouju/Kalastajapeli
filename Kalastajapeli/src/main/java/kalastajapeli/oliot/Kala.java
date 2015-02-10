@@ -1,6 +1,5 @@
-package kalastajapeli.domain;
+package kalastajapeli.oliot;
 
-import kalastajapeli.kalastajapeli.Suunta;
 import java.util.ArrayList;
 import java.util.List;
 

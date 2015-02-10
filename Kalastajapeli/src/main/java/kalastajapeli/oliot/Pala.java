@@ -1,4 +1,4 @@
-package kalastajapeli.domain;
+package kalastajapeli.oliot;
 
 /**
  * Luokka määrittää ja hakee palan sijainnin ja testaa osuuko kaksi palaa

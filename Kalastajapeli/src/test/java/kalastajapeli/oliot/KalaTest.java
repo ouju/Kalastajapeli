@@ -1,7 +1,8 @@
 
-package kalastajapeli.domain;
+package kalastajapeli.oliot;
 
-import kalastajapeli.kalastajapeli.Suunta;
+import kalastajapeli.oliot.Kala;
+import kalastajapeli.oliot.Suunta;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
@@ -9,9 +10,9 @@ import org.junit.BeforeClass;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
-public class KenkaTest {
+public class KalaTest {
     
-    public KenkaTest() {
+    public KalaTest() {
     }
     
     @BeforeClass
@@ -32,16 +33,9 @@ public class KenkaTest {
     
     @Test
     public void liikuToimiiOikein() {
-        Kenka k = new Kenka(2,1,Suunta.VASEN);
+        Kala k = new Kala(2,1,Suunta.VASEN);
         k.liiku();
         int vastaus = k.getX();
         assertEquals(vastaus, 1);
-    }
-    
-    @Test
-    public void getSuuntaToimii(){
-        Kenka k = new Kenka(2,1,Suunta.VASEN);
-        Suunta vastaus = k.getSuunta();
-        assertEquals(vastaus, Suunta.VASEN);
     }
 }
