@@ -1,8 +1,10 @@
 
 package kalastajapeli.oliot;
 
+import java.util.ArrayList;
 import kalastajapeli.oliot.Kala;
 import kalastajapeli.oliot.Suunta;
+import kalastajapeli.peli.Kalastajapeli;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
@@ -37,5 +39,20 @@ public class KalaTest {
         k.liiku();
         int vastaus = k.getX();
         assertEquals(vastaus, 1);
+    }
+    
+    @Test
+    public void kalaOsuuVasempaanLaitaanPalauttaaTrue(){
+        Kala k = new Kala(0,1,Suunta.VASEN);
+        k.liiku();
+        boolean vastaus = k.kalaOsuuVasempaanLaitaan();
+        assertEquals(vastaus,true);
+    }
+    
+    @Test
+    public void kalaOsuuVasempaanLaitaanPalauttaaFalse(){
+        Kala k = new Kala(2,1,Suunta.VASEN);
+        boolean vastaus = k.kalaOsuuVasempaanLaitaan();
+        assertEquals(vastaus,false);
     }
 }

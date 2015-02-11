@@ -38,7 +38,6 @@ public class KalastajapeliTest {
     @Test
     public void uusiKalaToimii() {
         Kalastajapeli peli = new Kalastajapeli(10, 20);
-        ArrayList<Kala> k = new ArrayList<>();
         for (int i = 0; i < 5; i++) {
             peli.uusiKala();
         }
@@ -49,7 +48,6 @@ public class KalastajapeliTest {
     @Test
     public void uusiKenkaToimii() {
         Kalastajapeli peli = new Kalastajapeli(10, 20);
-        ArrayList<Kenka> k = new ArrayList<>();
         for (int i = 0; i < 5; i++) {
             peli.uusiKenka();
         }
@@ -106,40 +104,14 @@ public class KalastajapeliTest {
     }
     /*
     @Test
-    public void kalaOsuuVasempaanLaitaanPalauttaaTrue(){
-        Kalastajapeli peli = new Kalastajapeli(0, 20);
+    public void paivitaPeliToimii(){
+        //Kala k = new Kala(2,4,Suunta.VASEN);
+        Kalastajapeli peli = new Kalastajapeli(10, 20);
         peli.uusiKala();
-        Kala k = peli.getKala().get(0);
-        k.liiku();
-        boolean vastaus = peli.kalaOsuuVasempaanLaitaan();
-        assertEquals(vastaus,true);
-    }
-    
-    @Test
-    public void kalaOsuuVasempaanLaitaanPalauttaaFalse(){
-        Kalastajapeli peli = new Kalastajapeli(10, 20);
-        Kala kala = new Kala(2,1,Suunta.VASEN);
-        ArrayList<Kala> k = new ArrayList<>();
-        k.add(kala);
-        boolean vastaus = peli.kalaOsuuVasempaanLaitaan();
-        assertEquals(vastaus,false);
-    }
-    
-    @Test
-    public void kalastajaOsuuLaitaanPalauttaaTrue(){
-        Kalastajapeli peli = new Kalastajapeli(10, 20);
-        Kalastaja k = new Kalastaja(1,-1, Suunta.ALAS);
-        peli.setKalastaja(k);
-        boolean vastaus = peli.kalastajaOsuuLaitaan();
-        assertEquals(vastaus, true);
-    }
-    
-    @Test
-    public void kalastajaOsuuLaitaanPalauttaaFalse(){
-        Kalastajapeli peli = new Kalastajapeli(10, 20);
-        Kalastaja k = new Kalastaja(1,2, Suunta.ALAS);
-        peli.setKalastaja(k);
-        boolean vastaus = peli.kalastajaOsuuLaitaan();
-        assertEquals(vastaus, false);
+        int vastaus2 = peli.getKala().get(0).getY();
+        peli.paivitaPeli();
+        int vastaus1 = peli.getKala().get(0).getY();
+        
+        assertEquals(vastaus1, vastaus2);
     }*/
 }

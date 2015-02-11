@@ -167,4 +167,18 @@ public class KalastajaTest {
         int vastaus = k.getY();
         assertEquals(vastaus, 1);
     }
+    
+    @Test
+    public void kalastajaOsuuLaitaanPalauttaaTrue(){
+        Kalastaja k = new Kalastaja(10, 20, 1,-1, Suunta.ALAS);
+        boolean vastaus = k.kalastajaOsuuLaitaan();
+        assertEquals(vastaus, true);
+    }
+    
+    @Test
+    public void kalastajaOsuuLaitaanPalauttaaFalse(){
+        Kalastaja k = new Kalastaja(10, 20, 1,2, Suunta.ALAS);
+        boolean vastaus = k.kalastajaOsuuLaitaan();
+        assertEquals(vastaus, false);
+    }
 }

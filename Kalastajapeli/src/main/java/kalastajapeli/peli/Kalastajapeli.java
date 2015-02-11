@@ -58,8 +58,10 @@ public class Kalastajapeli extends Timer implements ActionListener {
      *
      */
     public void uusiKenka() {
-        Random random = new Random();
-        kengat.add(new Kenka(leveys, random.nextInt(korkeus), Suunta.VASEN));
+        if (paivitysmaara % 9 == 0) {
+            Random random = new Random();
+            kengat.add(new Kenka(leveys, random.nextInt(korkeus), Suunta.VASEN));
+        }
     }
 
     /**
@@ -69,11 +71,12 @@ public class Kalastajapeli extends Timer implements ActionListener {
      */
     public void uusiKala() {
         // while (true) {
+        if (paivitysmaara % 5 == 0) {
 
-        Random random = new Random();
-        Kala kala = new Kala(leveys, random.nextInt(korkeus), Suunta.VASEN);
-        kalat.add(kala);
-
+            Random random = new Random();
+            Kala kala = new Kala(leveys, random.nextInt(korkeus), Suunta.VASEN);
+            kalat.add(kala);
+        }
         //kalastaja.osuu(kala);
 
         /* break;
@@ -149,19 +152,24 @@ public class Kalastajapeli extends Timer implements ActionListener {
         setDelay(500);
     }
 
-    public void paivitaPeli() {
+    public void liikutaKalaa() {
         for (Kala k : kalat) {
             k.liiku();
         }
+    }
+
+    public void liikutaKenkaa() {
         for (Kenka k : kengat) {
             k.liiku();
         }
-        if (paivitysmaara % 5 == 0) {
-            uusiKala();
-        }
-        if (paivitysmaara % 9 == 0) {
-            uusiKenka();
-        }
+    }
+
+    public void paivitaPeli() {
+        liikutaKalaa();
+        liikutaKenkaa();
+        uusiKala();
+        uusiKenka();
+
         kalastaja.liiku();
         paivitettava.paivita();
         paivitysmaara++;
