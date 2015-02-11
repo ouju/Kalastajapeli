@@ -30,7 +30,6 @@ public class Kalastajapeli extends Timer implements ActionListener {
     private int paivitysmaara;
     private Pala kala;
     private Kenka kenka;
-    private Kalastajapeli peli;
 
     /**
      * Konstruktori määrittää ikkunalle leveyden ja korkeuden ja muuttujat, luo
@@ -48,11 +47,10 @@ public class Kalastajapeli extends Timer implements ActionListener {
         this.leveys = leveys;
         this.korkeus = korkeus;
         this.jatkuu = true;
-        this.peli = peli;
         
         addActionListener(this);
         //setInitialDelay(2000);
-        kalastaja = new Kalastaja(peli, 1, 1, Suunta.ALAS);
+        kalastaja = new Kalastaja(this, 1, 1, Suunta.ALAS);
     }
 
     /**

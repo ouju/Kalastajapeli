@@ -31,7 +31,8 @@ public class Kalastaja {
         //this.palat = new ArrayList<Pala>();
         //this.palat.add(new Pala(x, y));
         this.suunta = Suunta.ALAS;
-        this.peli = peli;
+        //this.peli = new Kalastajapeli(10,30);
+        Kalastaja k = new Kalastaja(peli, 1, 1, Suunta.ALAS);
     }
 
     /**
