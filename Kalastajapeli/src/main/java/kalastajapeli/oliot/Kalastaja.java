@@ -2,6 +2,7 @@ package kalastajapeli.oliot;
 
 import java.util.ArrayList;
 import java.util.List;
+import kalastajapeli.peli.Kalastajapeli;
 
 /**
  * Luokka määrittää, palauttaa ja asettaa kalastajan sijainnin ja suunnan,
@@ -15,6 +16,7 @@ public class Kalastaja {
     private int x;
     private int y;
     private Suunta suunta;
+    private Kalastajapeli peli;
 
     /**
      * Konstruktori määrittelee Kalastajan ominaisuudet
@@ -23,12 +25,13 @@ public class Kalastaja {
      * @param y Kalastajan sijainti y-akselilla
      * @param suunta Kalastajan suunta
      */
-    public Kalastaja(int x, int y, Suunta suunta) {
+    public Kalastaja(Kalastajapeli peli, int x, int y, Suunta suunta) {
         this.x = x;
         this.y = y;
         //this.palat = new ArrayList<Pala>();
         //this.palat.add(new Pala(x, y));
         this.suunta = Suunta.ALAS;
+        this.peli = peli;
     }
 
     /**
@@ -103,7 +106,27 @@ public class Kalastaja {
         } else if (suunta == Suunta.YLOS) {
             y--;
         }
+        if (kalastajaOsuuLaitaan()) {
+            if (suunta == Suunta.ALAS) {
+                suunta = Suunta.YLOS;
+            } else {
+                suunta = Suunta.ALAS;
+            }
+        }
         //palat.remove(0);
         //palat.add(new Pala(x, y));
+    }
+    
+
+    /**
+     * Metodi tarkistaa osuuko kalastaja ylä- tai alalaitaan
+     *
+     * @return osumisen totuusarvo
+     */
+    public boolean kalastajaOsuuLaitaan() {
+        if (y == peli.getKorkeus() || y == -1) {
+            return true;
+        }
+        return false;
     }
 }

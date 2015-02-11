@@ -41,4 +41,17 @@ public class Kala extends Pala {
         //palat.remove(0);
         palat.add(new Pala(x, y));
     }
+
+    /**
+     * Metodi tarkistaa milloin kala saavuttaa vasemman laidan
+     *
+     * @return osumisen totuusarvo
+     */
+    public boolean kalaOsuuVasempaanLaitaan() {
+        if (x == -1) {
+            return true;
+        }
+
+        return false;
+    }
 }

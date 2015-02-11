@@ -8,11 +8,11 @@ import kalastajapeli.peli.Kalastajapeli;
 //Siksi tässä paketissa ei niitä ole, eikä kalastajapeli.gui
 //-paketissa
 public class Main {
-
-    public static void main(String[] args) {
+    
+    public static void main(String[] args) {        
         Kalastajapeli peli = new Kalastajapeli(30, 20);
-
         Kayttoliittyma liittyma = new Kayttoliittyma(peli, 30);
+        
         SwingUtilities.invokeLater(liittyma);
 
         while (liittyma.getPaivitettava() == null) {

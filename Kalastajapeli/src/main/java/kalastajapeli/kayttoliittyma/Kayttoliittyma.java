@@ -9,18 +9,25 @@ import kalastajapeli.peli.Kalastajapeli;
 //Käyttöliittymästä sanottiin ircissä ettei tarvitse tehdä javadocia?
 //Siksi tässä paketissa ei niitä ole, eikä kalastajapeli.kalastajapeli
 //-paketissa
-public class Kayttoliittyma implements Runnable {
+public class Kayttoliittyma implements Runnable 
+{
 
+    
     private Kalastajapeli peli;
     private int sivunPituus;
     private JFrame frame;
     private Piirtoalusta alusta;
+    
 
     public Kayttoliittyma(Kalastajapeli peli, int pituus) {
+        
         this.peli = peli;
         this.sivunPituus = pituus;
+        
+        
     }
 
+    @Override
     public void run() {
         frame = new JFrame("Kalastajapeli");
         int leveys = (peli.getLeveys() + 1) * sivunPituus + 10;
@@ -31,8 +38,9 @@ public class Kayttoliittyma implements Runnable {
         luoKomponentit(frame.getContentPane());
         frame.pack();
         frame.setVisible(true);
+        
     }
-
+    
     public void luoKomponentit(Container container) {
         alusta = new Piirtoalusta(peli, sivunPituus);
         container.add(alusta);
