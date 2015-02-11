@@ -18,8 +18,7 @@ import javax.swing.*;
  * @author Outi
  */
 public class Kalastajapeli extends Timer implements ActionListener {
-    
-    
+
     private Kalastaja kalastaja;
     private ArrayList<Kala> kalat;
     private ArrayList<Kenka> kengat;
@@ -47,10 +46,10 @@ public class Kalastajapeli extends Timer implements ActionListener {
         this.leveys = leveys;
         this.korkeus = korkeus;
         this.jatkuu = true;
-        
+
         addActionListener(this);
         //setInitialDelay(2000);
-        kalastaja = new Kalastaja(this, 1, 1, Suunta.ALAS);
+        kalastaja = new Kalastaja(this.leveys, this.korkeus, 1, 1, Suunta.ALAS);
     }
 
     /**
@@ -70,13 +69,13 @@ public class Kalastajapeli extends Timer implements ActionListener {
      */
     public void uusiKala() {
         // while (true) {
-        
+
         Random random = new Random();
         Kala kala = new Kala(leveys, random.nextInt(korkeus), Suunta.VASEN);
         kalat.add(kala);
-        
+
         //kalastaja.osuu(kala);
-        
+
         /* break;
          }
          if (kalaOsuuVasempaanLaitaan()) {
@@ -96,9 +95,6 @@ public class Kalastajapeli extends Timer implements ActionListener {
     /*   public void setKala(Kala kala) {
      this.kala = kala;
      }*/
-    
-    
-
     /**
      *
      * @return
@@ -148,6 +144,12 @@ public class Kalastajapeli extends Timer implements ActionListener {
         if (!jatkuu) {
             return;
         }
+
+        paivitaPeli();
+        setDelay(500);
+    }
+
+    public void paivitaPeli() {
         for (Kala k : kalat) {
             k.liiku();
         }
@@ -161,13 +163,10 @@ public class Kalastajapeli extends Timer implements ActionListener {
             uusiKenka();
         }
         kalastaja.liiku();
-        
         paivitettava.paivita();
-        setDelay(500);
         paivitysmaara++;
     }
 
-    
     /**
      *
      * @param paivitettava

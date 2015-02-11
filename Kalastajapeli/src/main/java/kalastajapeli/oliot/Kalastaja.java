@@ -17,6 +17,8 @@ public class Kalastaja {
     private int y;
     private Suunta suunta;
     private Kalastajapeli peli;
+    private int leveys;
+    private int korkeus;
 
     /**
      * Konstruktori määrittelee Kalastajan ominaisuudet
@@ -25,14 +27,15 @@ public class Kalastaja {
      * @param y Kalastajan sijainti y-akselilla
      * @param suunta Kalastajan suunta
      */
-    public Kalastaja(Kalastajapeli peli, int x, int y, Suunta suunta) {
+    public Kalastaja(int leveys, int korkeus, int x, int y, Suunta suunta) {
         this.x = x;
         this.y = y;
+        this.leveys = leveys;
+        this.korkeus = korkeus;
         //this.palat = new ArrayList<Pala>();
         //this.palat.add(new Pala(x, y));
         this.suunta = Suunta.ALAS;
-        //this.peli = new Kalastajapeli(10,30);
-        Kalastaja k = new Kalastaja(peli, 1, 1, Suunta.ALAS);
+        this.peli = peli;
     }
 
     /**
@@ -125,7 +128,7 @@ public class Kalastaja {
      * @return osumisen totuusarvo
      */
     public boolean kalastajaOsuuLaitaan() {
-        if (y == peli.getKorkeus() || y == -1) {
+        if (y == korkeus || y == -1) {
             return true;
         }
         return false;
