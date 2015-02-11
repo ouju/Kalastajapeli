@@ -57,3 +57,12 @@ Lisää testejä. Kaikkia testejä en saanut tehtyä, koska kävi ilmi että pro
 Javadociin perehtymistä, ja kommenttien lisääminen projektiin. Hieman epäselväksi jäi, mille kaikelle piti kirjoittaa javadoc, mutta tein kaikelle mille omasta mielestäni piti.
 
 Deadline 4
+
+10.2.2015, klo 21-00
+Tutustumista gamelooppiin netissä
+
+11.2.2015, klo 14-16
+Gameloopin testausta pajassa, en kuitenkaan saanut toimimaan niin palasin vanhaan
+
+11.2.2015, klo 21-01
+Lähinnä Kalastajapeli-luokan selkeytystä ActionPerformed-metodin osalta. Tavoitteena eritellä käyttöliittymä ja logiikka. Koodi parani huomattavasti
