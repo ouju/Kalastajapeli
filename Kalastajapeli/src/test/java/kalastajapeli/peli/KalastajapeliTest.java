@@ -6,7 +6,7 @@ import kalastajapeli.kayttoliittyma.Kayttoliittyma;
 import kalastajapeli.oliot.Kala;
 import kalastajapeli.oliot.Kalastaja;
 import kalastajapeli.oliot.Kenka;
-import kalastajapeli.kayttoliittyma.Paivitettava;
+//import kalastajapeli.kayttoliittyma.Paivitettava;
 import kalastajapeli.oliot.Suunta;
 import org.junit.After;
 import org.junit.AfterClass;
@@ -121,15 +121,6 @@ public class KalastajapeliTest {
         peli.liikutaKenkaa();
         int vastaus1 = peli.getKenka().get(0).getX();
         assertEquals(vastaus1, 9);
-    }
-    
-    @Test
-    public void setPaivitettavaToimii(){
-        Kalastajapeli peli = new Kalastajapeli(10, 20);
-        Kayttoliittyma kl = new Kayttoliittyma(peli, 10);
-        peli.setPaivitettava(null);
-        Paivitettava vastaus = kl.getPaivitettava();
-        assertEquals(vastaus, null);
     }
     /*
     @Test

@@ -1,17 +1,16 @@
 package kalastajapeli.peli;
 
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
+//import java.awt.event.ActionEvent;
+//import java.awt.event.ActionListener;
 import java.util.ArrayList;
 import java.util.Random;
-import javax.swing.Timer;
-import kalastajapeli.oliot.Suunta;
-import kalastajapeli.oliot.Kalastaja;
 import kalastajapeli.oliot.Kala;
+import kalastajapeli.oliot.Kalastaja;
 import kalastajapeli.oliot.Kenka;
-import kalastajapeli.oliot.Pala;
-import kalastajapeli.kayttoliittyma.Paivitettava;
-import javax.swing.*;
+import kalastajapeli.oliot.Suunta;
+//import kalastajapeli.oliot.Pala;
+//import kalastajapeli.kayttoliittyma.Paivitettava;
+//import javax.swing.*;
 
 /**
  *
@@ -25,7 +24,7 @@ public class Kalastajapeli //extends Timer implements ActionListener {
     private int korkeus;
     private int leveys;
     private boolean jatkuu;
-    private Paivitettava paivitettava;
+    //private Paivitettava paivitettava;
     private int paivitysmaara;
     //private Kala kala;
     //private Kenka kenka;
@@ -50,7 +49,7 @@ public class Kalastajapeli //extends Timer implements ActionListener {
         //addActionListener(this);
         //setInitialDelay(2000);
         kalastaja = new Kalastaja(this.leveys, this.korkeus, 1, 1, Suunta.ALAS);
-        //run();
+        
     }
 
     /**

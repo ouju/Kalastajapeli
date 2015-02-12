@@ -2,8 +2,8 @@ package kalastajapeli.kayttoliittyma;
 
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
-import kalastajapeli.oliot.Suunta;
 import kalastajapeli.oliot.Kalastaja;
+import kalastajapeli.oliot.Suunta;
 
 //Käyttöliittymästä sanottiin ircissä ettei tarvitse tehdä javadocia?
 //Siksi tässä paketissa ei niitä ole, eikä kalastajapeli.kalastajapeli
