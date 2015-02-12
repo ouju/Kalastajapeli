@@ -6,7 +6,7 @@ import kalastajapeli.oliot.Kalastaja;
 import kalastajapeli.oliot.Suunta;
 
 //Käyttöliittymästä sanottiin ircissä ettei tarvitse tehdä javadocia?
-//Siksi tässä paketissa ei niitä ole, eikä kalastajapeli.kalastajapeli
+//Siksi tässä paketissa ei niitä ole, eikä kalastajapeli.main
 //-paketissa
 public class Nappaimistonkuuntelija implements KeyListener {
 

@@ -23,6 +23,8 @@ public class Kalastaja {
     /**
      * Konstruktori määrittelee Kalastajan ominaisuudet
      *
+     * @param leveys Peli-ikkunan leveys
+     * @param korkeus Peli-ikkunan korkeus
      * @param x Kalastajan sijainti x-akselilla
      * @param y Kalastajan sijainti y-akselilla
      * @param suunta Kalastajan suunta
@@ -35,7 +37,7 @@ public class Kalastaja {
         //this.palat = new ArrayList<Pala>();
         //this.palat.add(new Pala(x, y));
         this.suunta = Suunta.ALAS;
-        this.peli = peli;
+        //this.peli = peli;
     }
 
     /**

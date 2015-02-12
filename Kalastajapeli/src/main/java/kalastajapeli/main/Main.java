@@ -5,7 +5,7 @@ import kalastajapeli.kayttoliittyma.Kayttoliittyma;
 import kalastajapeli.peli.Kalastajapeli;
 
 //Käyttöliittymästä sanottiin ircissä ettei tarvitse tehdä javadocia?
-//Siksi tässä paketissa ei niitä ole, eikä kalastajapeli.gui
+//Siksi tässä paketissa ei niitä ole, eikä kalastajapeli.kayttoliittyma
 //-paketissa
 public class Main {
     

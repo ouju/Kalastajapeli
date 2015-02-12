@@ -8,7 +8,7 @@ import kalastajapeli.oliot.Kenka;
 import kalastajapeli.peli.Kalastajapeli;
 
 //Käyttöliittymästä sanottiin ircissä ettei tarvitse tehdä javadocia?
-//Siksi tässä paketissa ei niitä ole, eikä kalastajapeli.kalastajapeli
+//Siksi tässä paketissa ei niitä ole, eikä kalastajapeli.main
 //-paketissa
 public class Piirtoalusta extends JPanel //implements Paivitettava {
 {

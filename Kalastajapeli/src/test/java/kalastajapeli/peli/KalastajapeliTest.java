@@ -108,10 +108,9 @@ public class KalastajapeliTest {
     public void liikutaKalaaToimii(){
         Kalastajapeli peli = new Kalastajapeli(10, 20);
         peli.uusiKala();
-        int vastaus2 = peli.getKala().get(0).getX();
         peli.liikutaKalaa();
-        int vastaus1 = peli.getKala().get(0).getX()+1;
-        assertEquals(vastaus1, vastaus2);
+        int vastaus = peli.getKala().get(0).getX();
+        assertEquals(vastaus, 9);
     }
     
     @Test
@@ -119,18 +118,66 @@ public class KalastajapeliTest {
         Kalastajapeli peli = new Kalastajapeli(10, 20);
         peli.uusiKenka();
         peli.liikutaKenkaa();
-        int vastaus1 = peli.getKenka().get(0).getX();
-        assertEquals(vastaus1, 9);
+        int vastaus = peli.getKenka().get(0).getX();
+        assertEquals(vastaus, 9);
     }
-    /*
+    
     @Test
     public void paivitaPelinLiikutaKalaaToimii(){
         Kalastajapeli peli = new Kalastajapeli(10, 20);
         peli.uusiKala();
-        int vastaus2 = peli.getKala().get(0).getY();
         peli.paivitaPeli();
-        int vastaus1 = peli.getKala().get(0).getY()+1;
+        int vastaus = peli.getKala().get(0).getX();
         
-        assertEquals(vastaus1, vastaus2);
-    }*/
+        assertEquals(vastaus, 9);
+    }
+    
+    @Test
+    public void paivitaPelinLiikutaKenkaaToimii(){
+        Kalastajapeli peli = new Kalastajapeli(10, 20);
+        peli.uusiKenka();
+        peli.paivitaPeli();
+        int vastaus = peli.getKenka().get(0).getX();
+        
+        assertEquals(vastaus, 9);
+    }
+    
+    @Test
+    public void paivitaPelinUusiKalaToimii(){
+        Kalastajapeli peli = new Kalastajapeli(10, 20);
+        peli.paivitaPeli();
+        int vastaus = peli.getKala().size();
+        assertEquals(vastaus, 1);
+    }
+    
+    @Test
+    public void paivitaPelinUusiKenkaToimii(){
+        Kalastajapeli peli = new Kalastajapeli(10, 20);
+        peli.paivitaPeli();
+        boolean vastaus = peli.getKenka().contains(peli.getKenka().get(0));
+        assertEquals(vastaus, true);
+    }
+    
+    @Test
+    public void paivitaPelinKalastajanLiikutusToimii(){
+        Kalastajapeli peli = new Kalastajapeli(10, 20);
+        peli.paivitaPeli();
+        int vastaus = peli.getKalastaja().getY();
+        assertEquals(vastaus, 2);
+    }
+    
+    @Test
+    public void paivitaPelinPaivitysmaaraToimii(){
+        Kalastajapeli peli = new Kalastajapeli(10, 20);
+        peli.paivitaPeli();
+        int vastaus = peli.getPaivitysmaara();
+        assertEquals(vastaus, 1);
+    }
+    
+    @Test
+    public void getPaivitysmaaraToimii(){
+        Kalastajapeli peli = new Kalastajapeli(10, 20);
+        int vastaus = peli.getPaivitysmaara();
+        assertEquals(vastaus, 0);
+    }
 }

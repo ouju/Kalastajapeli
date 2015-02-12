@@ -16,8 +16,8 @@ import kalastajapeli.oliot.Suunta;
  *
  * @author Outi
  */
-public class Kalastajapeli //extends Timer implements ActionListener {
-{
+public class Kalastajapeli {
+
     private Kalastaja kalastaja;
     private ArrayList<Kala> kalat;
     private ArrayList<Kenka> kengat;
@@ -49,7 +49,15 @@ public class Kalastajapeli //extends Timer implements ActionListener {
         //addActionListener(this);
         //setInitialDelay(2000);
         kalastaja = new Kalastaja(this.leveys, this.korkeus, 1, 1, Suunta.ALAS);
-        
+
+    }
+    
+    /**
+     *
+     * @return
+     */
+    public int getPaivitysmaara(){
+        return this.paivitysmaara;
     }
 
     /**
@@ -138,32 +146,49 @@ public class Kalastajapeli //extends Timer implements ActionListener {
         return leveys;
     }
 
+    /**
+     *
+     * @return
+     */
     public boolean jatkuu() {
         return jatkuu;
     }
 
     /*@Override
-    public void actionPerformed(ActionEvent ae) {
-        if (!jatkuu) {
-            return;
-        }
+     public void actionPerformed(ActionEvent ae) {
+     if (!jatkuu) {
+     return;
+     }
 
-        paivitaPeli();
-        setDelay(500);
-    }*/
-
+     paivitaPeli();
+     setDelay(500);
+     }*/
+    
+    /**
+     * Metodi käy läpi kaikki kalat ja kutsuu Kala-luokan liiku-metodia
+     *
+     */
     public void liikutaKalaa() {
         for (Kala k : kalat) {
             k.liiku();
         }
     }
 
+    /**
+     * Metodi käy läpi kaikki kengät ja kutsuu Kenkä-luokan liiku-metodia
+     *
+     */
     public void liikutaKenkaa() {
         for (Kenka k : kengat) {
             k.liiku();
         }
     }
 
+    /**
+     * Luo ja liikuttaa kaloja ja kenkiä ja liikuttaa kalastajaa,
+     * sekä lisää päivitysmäärää aina tätä metodia kutsuttaessa
+     *
+     */
     public void paivitaPeli() {
         liikutaKalaa();
         liikutaKenkaa();
@@ -174,12 +199,8 @@ public class Kalastajapeli //extends Timer implements ActionListener {
         //paivitettava.paivita();
         paivitysmaara++;
     }
-
-    /**
-     *
-     * @param paivitettava
-     */
+    
     /*public void setPaivitettava(Paivitettava paivitettava) {
-        this.paivitettava = paivitettava;
-    }*/
+     this.paivitettava = paivitettava;
+     }*/
 }
