@@ -181,4 +181,34 @@ public class KalastajaTest {
         boolean vastaus = k.kalastajaOsuuLaitaan();
         assertEquals(vastaus, false);
     }
+    
+    @Test
+    public void kalastajaLiikkuuYlosOsuttuaanAlalaitaan(){
+        Kalastaja k = new Kalastaja(10, 20, 1, 19, Suunta.ALAS);
+        k.liiku();
+        k.liiku();
+        Suunta vastaus = k.getSuunta();
+        assertEquals(vastaus, Suunta.YLOS);
+    }
+    
+    @Test
+    public void kalastajaLiikkuuAlasOsuttuaanYlalaitaan(){
+        Kalastaja k = new Kalastaja(10, 20, 1, 0, Suunta.ALAS);
+        k.setSuunta(Suunta.YLOS);
+        k.liiku();
+        //k.liiku();
+        Suunta vastaus = k.getSuunta();
+        assertEquals(vastaus, Suunta.ALAS);
+    }
+    
+    @Test
+    public void kalastajaLiikkuuAlasOsuttuaanYlalaitaanTrue(){
+        Kalastaja k = new Kalastaja(10, 20, 1, 0, Suunta.ALAS);
+        k.setSuunta(Suunta.YLOS);
+        k.liiku();
+        //k.liiku();
+        //boolean kalastajaOsuuLaitaan = true;
+        Suunta vastaus = k.getSuunta();
+        assertEquals(vastaus, Suunta.ALAS);
+    }
 }

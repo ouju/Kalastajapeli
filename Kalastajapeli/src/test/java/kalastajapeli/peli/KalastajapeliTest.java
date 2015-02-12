@@ -102,16 +102,35 @@ public class KalastajapeliTest {
         boolean vastaus = peli.jatkuu();
         assertEquals(vastaus,true);
     }
-    /*
+    
     @Test
-    public void paivitaPeliToimii(){
-        //Kala k = new Kala(2,4,Suunta.VASEN);
+    public void liikutaKalaaToimii(){
+        Kalastajapeli peli = new Kalastajapeli(10, 20);
+        peli.uusiKala();
+        int vastaus2 = peli.getKala().get(0).getX();
+        peli.liikutaKalaa();
+        int vastaus1 = peli.getKala().get(0).getX()+1;
+        assertEquals(vastaus1, vastaus2);
+    }
+    
+    @Test
+    public void liikutaKenkaaToimii(){
+        Kalastajapeli peli = new Kalastajapeli(10, 20);
+        peli.uusiKenka();
+        int vastaus2 = peli.getKenka().get(0).getX();
+        peli.liikutaKenkaa();
+        int vastaus1 = peli.getKenka().get(0).getX()+1;
+        assertEquals(vastaus1, vastaus2);
+    }
+    
+    @Test
+    public void paivitaPelinLiikutaKalaaToimii(){
         Kalastajapeli peli = new Kalastajapeli(10, 20);
         peli.uusiKala();
         int vastaus2 = peli.getKala().get(0).getY();
         peli.paivitaPeli();
-        int vastaus1 = peli.getKala().get(0).getY();
+        int vastaus1 = peli.getKala().get(0).getY()+1;
         
         assertEquals(vastaus1, vastaus2);
-    }*/
+    }
 }

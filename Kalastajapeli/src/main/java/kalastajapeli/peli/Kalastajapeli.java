@@ -27,7 +27,7 @@ public class Kalastajapeli extends Timer implements ActionListener {
     private boolean jatkuu;
     private Paivitettava paivitettava;
     private int paivitysmaara;
-    private Pala kala;
+    private Kala kala;
     private Kenka kenka;
 
     /**
