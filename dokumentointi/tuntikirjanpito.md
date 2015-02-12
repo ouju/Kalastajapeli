@@ -66,3 +66,6 @@ Gameloopin testausta pajassa, en kuitenkaan saanut toimimaan niin palasin vanhaa
 
 11.2.2015, klo 21-01
 Lähinnä Kalastajapeli-luokan selkeytystä ActionPerformed-metodin osalta. Tavoitteena eritellä käyttöliittymä ja logiikka. Koodi parani huomattavasti
+
+12.2.2015, klo 19:30-02
+Käyttöliittymän erottaminen logiikasta. Pitin tulokset paranivat huomattavasti ja koodi on selkeämpi, vaikka paljon uusia metodeita ei ehtinyt syntyä. Sekvenssikaavioiden piirtämistä.
