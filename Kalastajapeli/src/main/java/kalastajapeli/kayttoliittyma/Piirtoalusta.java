@@ -11,8 +11,8 @@ import kalastajapeli.peli.Kalastajapeli;
 //Käyttöliittymästä sanottiin ircissä ettei tarvitse tehdä javadocia?
 //Siksi tässä paketissa ei niitä ole, eikä kalastajapeli.kalastajapeli
 //-paketissa
-public class Piirtoalusta extends JPanel implements Paivitettava {
-
+public class Piirtoalusta extends JPanel //implements Paivitettava {
+{
     private Kalastajapeli peli;
     private int sivu;
 
@@ -21,10 +21,10 @@ public class Piirtoalusta extends JPanel implements Paivitettava {
         this.sivu = palanSivunPituus;
     }
 
-    @Override
+    /*@Override
     public void paivita() {
         repaint();
-    }
+    }*/
 
     @Override
     public void paintComponent(Graphics g) {

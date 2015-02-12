@@ -50,6 +50,7 @@ public class Kalastajapeli //extends Timer implements ActionListener {
         //addActionListener(this);
         //setInitialDelay(2000);
         kalastaja = new Kalastaja(this.leveys, this.korkeus, 1, 1, Suunta.ALAS);
+        //run();
     }
 
     /**
@@ -171,7 +172,7 @@ public class Kalastajapeli //extends Timer implements ActionListener {
         uusiKenka();
 
         kalastaja.liiku();
-        paivitettava.paivita();
+        //paivitettava.paivita();
         paivitysmaara++;
     }
 
@@ -179,7 +180,7 @@ public class Kalastajapeli //extends Timer implements ActionListener {
      *
      * @param paivitettava
      */
-    public void setPaivitettava(Paivitettava paivitettava) {
+    /*public void setPaivitettava(Paivitettava paivitettava) {
         this.paivitettava = paivitettava;
-    }
+    }*/
 }

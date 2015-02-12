@@ -26,7 +26,7 @@ public class Kayttoliittyma implements Runnable
         
         this.peli = peli;
         this.sivunPituus = pituus;
-        
+        run();
         
     }
 
@@ -64,7 +64,7 @@ public class Kayttoliittyma implements Runnable
         return frame;
     }
 
-    public Paivitettava getPaivitettava() {
+    /*public Paivitettava getPaivitettava() {
         return alusta;
-    }
+    }*/
 }

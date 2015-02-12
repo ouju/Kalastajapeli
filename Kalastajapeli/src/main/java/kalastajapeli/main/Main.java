@@ -15,15 +15,15 @@ public class Main {
         
         SwingUtilities.invokeLater(liittyma);
 
-        while (liittyma.getPaivitettava() == null) {
+        /*while (liittyma.getPaivitettava() == null) {
             try {
                 Thread.sleep(100);
             } catch (InterruptedException e) {
                 System.out.println("Piirtoalustaa ei ole vielä luotu.");
             }
-        }
+        }*/
 
-        peli.setPaivitettava(liittyma.getPaivitettava());
-        peli.start();
+        //peli.setPaivitettava(liittyma.getPaivitettava());
+        //peli.start();
     }
 }
