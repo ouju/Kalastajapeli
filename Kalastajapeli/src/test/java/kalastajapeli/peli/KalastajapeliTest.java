@@ -2,6 +2,7 @@ package kalastajapeli.peli;
 
 import java.util.ArrayList;
 import java.util.Random;
+import kalastajapeli.kayttoliittyma.Kayttoliittyma;
 import kalastajapeli.oliot.Kala;
 import kalastajapeli.oliot.Kalastaja;
 import kalastajapeli.oliot.Kenka;
@@ -117,10 +118,18 @@ public class KalastajapeliTest {
     public void liikutaKenkaaToimii(){
         Kalastajapeli peli = new Kalastajapeli(10, 20);
         peli.uusiKenka();
-        //int vastaus2 = peli.getKenka().get(0).getX();
         peli.liikutaKenkaa();
         int vastaus1 = peli.getKenka().get(0).getX();
         assertEquals(vastaus1, 9);
+    }
+    
+    @Test
+    public void setPaivitettavaToimii(){
+        Kalastajapeli peli = new Kalastajapeli(10, 20);
+        Kayttoliittyma kl = new Kayttoliittyma(peli, 10);
+        peli.setPaivitettava(null);
+        Paivitettava vastaus = kl.getPaivitettava();
+        assertEquals(vastaus, null);
     }
     /*
     @Test

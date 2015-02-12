@@ -2,7 +2,10 @@ package kalastajapeli.kayttoliittyma;
 
 import java.awt.Container;
 import java.awt.Dimension;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.JFrame;
+import javax.swing.Timer;
 import javax.swing.WindowConstants;
 import kalastajapeli.peli.Kalastajapeli;
 
@@ -38,6 +41,15 @@ public class Kayttoliittyma implements Runnable
         luoKomponentit(frame.getContentPane());
         frame.pack();
         frame.setVisible(true);
+        while(peli.jatkuu()){
+            peli.paivitaPeli();
+            //alusta.paivita();
+            try {
+                Thread.sleep(500);
+            } catch (InterruptedException ex) {
+                Logger.getLogger(Kayttoliittyma.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        }
         
     }
     

@@ -17,8 +17,8 @@ import javax.swing.*;
  *
  * @author Outi
  */
-public class Kalastajapeli extends Timer implements ActionListener {
-
+public class Kalastajapeli //extends Timer implements ActionListener {
+{
     private Kalastaja kalastaja;
     private ArrayList<Kala> kalat;
     private ArrayList<Kenka> kengat;
@@ -27,8 +27,8 @@ public class Kalastajapeli extends Timer implements ActionListener {
     private boolean jatkuu;
     private Paivitettava paivitettava;
     private int paivitysmaara;
-    private Kala kala;
-    private Kenka kenka;
+    //private Kala kala;
+    //private Kenka kenka;
 
     /**
      * Konstruktori määrittää ikkunalle leveyden ja korkeuden ja muuttujat, luo
@@ -39,7 +39,7 @@ public class Kalastajapeli extends Timer implements ActionListener {
      * @param korkeus Peli-kkunan korkeus
      */
     public Kalastajapeli(int leveys, int korkeus) {
-        super(1000, null);
+        //super(1000, null);
         this.paivitysmaara = 0;
         this.kalat = new ArrayList<>();
         this.kengat = new ArrayList<>();
@@ -47,7 +47,7 @@ public class Kalastajapeli extends Timer implements ActionListener {
         this.korkeus = korkeus;
         this.jatkuu = true;
 
-        addActionListener(this);
+        //addActionListener(this);
         //setInitialDelay(2000);
         kalastaja = new Kalastaja(this.leveys, this.korkeus, 1, 1, Suunta.ALAS);
     }
@@ -142,7 +142,7 @@ public class Kalastajapeli extends Timer implements ActionListener {
         return jatkuu;
     }
 
-    @Override
+    /*@Override
     public void actionPerformed(ActionEvent ae) {
         if (!jatkuu) {
             return;
@@ -150,7 +150,7 @@ public class Kalastajapeli extends Timer implements ActionListener {
 
         paivitaPeli();
         setDelay(500);
-    }
+    }*/
 
     public void liikutaKalaa() {
         for (Kala k : kalat) {
