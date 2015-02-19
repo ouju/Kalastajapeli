@@ -27,5 +27,7 @@ public class Main {
         peli.setPaivitettava(liittyma.getPaivitettava());
         peli.start();
         */
+        //liittyma.luoLoppukomponentit(frame.getContentPane());
+        
     }
 }

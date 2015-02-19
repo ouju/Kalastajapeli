@@ -36,7 +36,7 @@ public class Kayttoliittyma implements Runnable {
         luoKomponentit(frame.getContentPane());
         frame.pack();
         frame.setVisible(true);
-
+        
 
     }
 
@@ -55,6 +55,7 @@ public class Kayttoliittyma implements Runnable {
         }
         
         
+        
     }
 
     private void luoKomponentit(Container container) {
@@ -62,19 +63,11 @@ public class Kayttoliittyma implements Runnable {
         container.add(alusta);
         Nappaimistonkuuntelija nk = new Nappaimistonkuuntelija(peli.getKalastaja());
         getFrame().addKeyListener(nk);
-        if (peli.getSydamet() == 1) {
-            JTextField teksti = new JTextField();
-            
-            Font font = new Font("Helvetica", Font.PLAIN, 30);
-            teksti.setFont(font);
-            teksti.setForeground(Color.BLACK);
-            teksti.setHorizontalAlignment(SwingConstants.CENTER);
-
-            container.add(teksti);
-            teksti.setText("Peli päättyi! Pisteesi: " + peli.getPisteet());
-            teksti.setEditable(false);
-        }
+        
     }
+    
+    
+    
 
     public JFrame getFrame() {
         return frame;

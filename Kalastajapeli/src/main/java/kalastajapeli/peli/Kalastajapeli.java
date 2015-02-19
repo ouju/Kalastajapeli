@@ -48,9 +48,9 @@ public class Kalastajapeli {
         this.kengat = new ArrayList<>();
         this.leveys = leveys;
         this.korkeus = korkeus;
-        this.jatkuu = true;
+        //this.jatkuu = true;
         this.pisteet = 0;
-        this.sydamet = 1;
+        this.sydamet = 0;
 
         //addActionListener(this);
         //setInitialDelay(2000);
@@ -66,16 +66,15 @@ public class Kalastajapeli {
      }
      return false;
      }
-    public boolean kalastajaOsuuKenkaan() {
-        for (Kenka k : kengat) {
-            if (kalastaja.osuu(k)) {
-                sydamet--;
-                return true;
-            }
-        }
-        return false;
-    }*/
-
+     public boolean kalastajaOsuuKenkaan() {
+     for (Kenka k : kengat) {
+     if (kalastaja.osuu(k)) {
+     sydamet--;
+     return true;
+     }
+     }
+     return false;
+     }*/
     public int getSydamet() {
         return sydamet;
     }
@@ -180,8 +179,10 @@ public class Kalastajapeli {
      * @return
      */
     public boolean jatkuu() {
-        
-            return jatkuu;
+        if (sydamet == 0) {
+            return false;
+        }
+        return true;
     }
 
     /**
