@@ -1,14 +1,11 @@
 package kalastajapeli.kayttoliittyma;
 
-import java.awt.Color;
+//import java.awt.Color;
 import java.awt.Container;
 import java.awt.Dimension;
-import java.awt.Font;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JFrame;
-import javax.swing.JTextField;
-import javax.swing.SwingConstants;
 import javax.swing.WindowConstants;
 import kalastajapeli.peli.Kalastajapeli;
 
@@ -21,7 +18,7 @@ public class Kayttoliittyma implements Runnable {
     private int sivunPituus;
     private JFrame frame;
     private Piirtoalusta alusta;
-    private JTextField field;
+    //private JTextField field;
 
     public Kayttoliittyma(Kalastajapeli peli, int pituus) {
 
@@ -51,11 +48,7 @@ public class Kayttoliittyma implements Runnable {
             } catch (InterruptedException ex) {
                 Logger.getLogger(Kayttoliittyma.class.getName()).log(Level.SEVERE, null, ex);
             }
-            
         }
-        
-        
-        
     }
 
     private void luoKomponentit(Container container) {
@@ -63,17 +56,9 @@ public class Kayttoliittyma implements Runnable {
         container.add(alusta);
         Nappaimistonkuuntelija nk = new Nappaimistonkuuntelija(peli.getKalastaja());
         getFrame().addKeyListener(nk);
-        
     }
-    
-    
-    
 
     public JFrame getFrame() {
         return frame;
     }
-
-    /*public Paivitettava getPaivitettava() {
-     return alusta;
-     }*/
 }

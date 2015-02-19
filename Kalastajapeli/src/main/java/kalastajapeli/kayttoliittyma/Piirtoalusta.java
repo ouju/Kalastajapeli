@@ -1,12 +1,9 @@
 package kalastajapeli.kayttoliittyma;
 
 import java.awt.Color;
-import java.awt.Container;
 import java.awt.Font;
 import java.awt.Graphics;
 import javax.swing.JPanel;
-import javax.swing.JTextField;
-import javax.swing.SwingConstants;
 import kalastajapeli.oliot.Kala;
 import kalastajapeli.oliot.Kenka;
 import kalastajapeli.peli.Kalastajapeli;

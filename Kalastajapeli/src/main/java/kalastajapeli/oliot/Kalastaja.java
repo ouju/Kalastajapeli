@@ -23,8 +23,7 @@ public class Kalastaja {
     /**
      * Konstruktori määrittelee Kalastajan ominaisuudet
      *
-     * @param leveys Peli-ikkunan leveys
-     * @param korkeus Peli-ikkunan korkeus
+     * @param peli Kalastajapeli
      * @param x Kalastajan sijainti x-akselilla
      * @param y Kalastajan sijainti y-akselilla
      * @param suunta Kalastajan suunta
@@ -100,7 +99,8 @@ public class Kalastaja {
 
     /**
      * Metodi liikuttaa kalastajaa askeleen alas, jos sen suunnaksi on määrätty
-     * alas, ja ylös jos suunnaksi määrätty ylös
+     * alas, ja ylös jos suunnaksi määrätty ylös. Kalastajan osuessa laitaan
+     * sen suunta vaihtuu
      *
      */
     public void liiku() {

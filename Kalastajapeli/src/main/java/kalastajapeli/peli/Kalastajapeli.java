@@ -58,31 +58,26 @@ public class Kalastajapeli {
 
     }
 
-    /*public boolean kalastajaOsuuKalaan() {
-        
-            
-     return true;
-            
-     }
-     return false;
-     }
-     public boolean kalastajaOsuuKenkaan() {
-     for (Kenka k : kengat) {
-     if (kalastaja.osuu(k)) {
-     sydamet--;
-     return true;
-     }
-     }
-     return false;
-     }*/
+    /**
+     *
+     * @return
+     */
     public int getSydamet() {
         return sydamet;
     }
-    
-    public void setSydamet(int sydamet){
+
+    /**
+     *
+     * @param sydamet Kalastajan elämien määrä
+     */
+    public void setSydamet(int sydamet) {
         this.sydamet = sydamet;
     }
 
+    /**
+     *
+     * @return
+     */
     public int getPisteet() {
         return pisteet;
     }
@@ -120,14 +115,6 @@ public class Kalastajapeli {
             Kala kala = new Kala(leveys, random.nextInt(korkeus), Suunta.VASEN);
             kalat.add(kala);
         }
-        //kalastaja.osuu(kala);
-
-        /* break;
-         }
-         if (kalaOsuuVasempaanLaitaan()) {
-         break;
-         }*/
-        //  }
     }
 
     /**
@@ -179,8 +166,9 @@ public class Kalastajapeli {
     }
 
     /**
+     * Peli jatkuu kunnes sydämiä ei ole enää jäljellä
      *
-     * @return
+     * @return jatkumisen totuusarvo
      */
     public boolean jatkuu() {
         if (sydamet == 0) {
@@ -210,31 +198,43 @@ public class Kalastajapeli {
     }
 
     /**
-     * Luo ja liikuttaa kaloja ja kenkiä ja liikuttaa kalastajaa, sekä lisää
-     * päivitysmäärää aina tätä metodia kutsuttaessa
+     * Paivittaa pisteet ja sydänmäärät, luo ja liikuttaa kaloja ja kenkiä 
+     * ja liikuttaa kalastajaa, sekä lisää päivitysmäärää aina tätä metodia 
+     * kutsuttaessa
      *
      */
     public void paivitaPeli() {
         paivitaPisteet();
         paivitaSydamet();
-        
+
         uusiKala();
         uusiKenka();
         liikutaKalaa();
         liikutaKenkaa();
         kalastaja.liiku();
-        
+
         paivitysmaara++;
     }
-    public void paivitaPisteet(){
+
+    /**
+     * Kalastajan osuessa kalaan se saa yhden pisteen
+     *
+     */
+    public void paivitaPisteet() {
         for (Kala k : kalat) {
             if (kalastaja.osuu(k)) {
                 pisteet++;
                 //kalat.remove(k);
+                //kalat.remove(kalat.indexOf(k));
             }
         }
     }
-    public void paivitaSydamet(){
+
+    /**
+     * Kalastajan osuessa kenkään se menettää yhden sydämen
+     *
+     */
+    public void paivitaSydamet() {
         for (Kenka k : kengat) {
             if (kalastaja.osuu(k)) {
                 sydamet--;

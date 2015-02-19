@@ -23,7 +23,7 @@ public class Kala extends Pala {
     public Kala(int x, int y, Suunta suunta) {
         super(x, y);
         this.suunta = Suunta.VASEN;
-        this.palat = new ArrayList<Pala>();
+        this.palat = new ArrayList<>();
         this.palat.add(new Pala(x, y));
     }
 
