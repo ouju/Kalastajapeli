@@ -1,10 +1,14 @@
 # Kalastajapeli
-Tervetuloa huikeaan vesiseikkailuun!
+###Tervetuloa huikeaan vesiseikkailuun!
 
 Kerrytä pisteitä nappaamalla kaloja, mutta muistathan: varo kenkiä!
 
-Kalastaja: musta soikio
-Kala: sininen soikio
-Kenkä: harmaa ympyrä
+
+*Kalastaja: musta soikio
+
+*Kala: sininen soikio
+
+*Kenkä: harmaa ympyrä
+
 
 Punaiset pisteet yläreunassa kertovat paljonko elämiä on jäljellä, aina kenkään osuessa niitä on yksi vähemmän!
