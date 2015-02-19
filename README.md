@@ -1,13 +1,13 @@
 # Kalastajapeli
-###Tervetuloa huikeaan vesiseikkailuun!
+###Tervetuloa huikeaan vesiseikkailuun
 
 Kerrytä pisteitä nappaamalla kaloja, mutta muistathan: varo kenkiä!
 
-Olio        | Piirrettynä
-------------|---------------
-Kalastaja   | musta soikio
-Kala        | sininen soikio
-Kenkä       | harmaa ympyrä
+Olio        | Piirrettynä     | Liike
+------------|-----------------|-------------
+Kalastaja   | musta soikio    | ylös ja alas
+Kala        | sininen soikio  | vasemmalle
+Kenkä       | harmaa ympyrä   | vasemmalle
 
 
 Punaiset pisteet yläreunassa kertovat paljonko elämiä on jäljellä, aina kenkään osuessa niitä on yksi vähemmän!
