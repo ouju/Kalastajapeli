@@ -72,5 +72,5 @@ Käyttöliittymän erottaminen logiikasta. Pitin tulokset paranivat huomattavast
 
 Deadline 5
 
-19.2.2015, klo 14-23
-Uusien ominaisuuksien lisäämistä, kuten pisteiden lasku, sydämien piirtäminen ja väheneminen, sekä lopputekstin asettaminen. Testit uusille metodeille
+19.2.2015, klo 14-23 & 00-02
+Uusien ominaisuuksien lisäämistä, kuten pisteiden lasku, sydämien piirtäminen ja väheneminen, sekä lopputekstin asettaminen. Testit uusille metodeille. Pari uutta sekvenssikaaviota ja vanhojen päivitys
