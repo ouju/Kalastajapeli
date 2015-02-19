@@ -69,3 +69,8 @@ Lähinnä Kalastajapeli-luokan selkeytystä ActionPerformed-metodin osalta. Tavo
 
 12.2.2015, klo 19:30-02
 Käyttöliittymän erottaminen logiikasta. Pitin tulokset paranivat huomattavasti ja koodi on selkeämpi, vaikka paljon uusia metodeita ei ehtinyt syntyä. Sekvenssikaavioiden piirtämistä.
+
+Deadline 5
+
+19.2.2015, klo 14-23
+Uusien ominaisuuksien lisäämistä, kuten pisteiden lasku, sydämien piirtäminen ja väheneminen, sekä lopputekstin asettaminen. Testit uusille metodeille
