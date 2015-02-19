@@ -13,6 +13,8 @@ import kalastajapeli.oliot.Suunta;
 //import javax.swing.*;
 
 /**
+ * Luokka määrittää pelin päivittämisen, eli luo ja liikuttaa kaloja, kenkiä ja
+ * kalastajaa sekä pitää laskua päivitysmääristä
  *
  * @author Outi
  */
@@ -28,6 +30,8 @@ public class Kalastajapeli {
     private int paivitysmaara;
     //private Kala kala;
     //private Kenka kenka;
+    private int pisteet;
+    private int sydamet;
 
     /**
      * Konstruktori määrittää ikkunalle leveyden ja korkeuden ja muuttujat, luo
@@ -45,18 +49,46 @@ public class Kalastajapeli {
         this.leveys = leveys;
         this.korkeus = korkeus;
         this.jatkuu = true;
+        this.pisteet = 0;
+        this.sydamet = 1;
 
         //addActionListener(this);
         //setInitialDelay(2000);
-        kalastaja = new Kalastaja(this.leveys, this.korkeus, 1, 1, Suunta.ALAS);
+        kalastaja = new Kalastaja(this, 1, 1, Suunta.ALAS);
 
     }
-    
+
+    /*public boolean kalastajaOsuuKalaan() {
+        
+            
+     return true;
+            
+     }
+     return false;
+     }
+    public boolean kalastajaOsuuKenkaan() {
+        for (Kenka k : kengat) {
+            if (kalastaja.osuu(k)) {
+                sydamet--;
+                return true;
+            }
+        }
+        return false;
+    }*/
+
+    public int getSydamet() {
+        return sydamet;
+    }
+
+    public int getPisteet() {
+        return pisteet;
+    }
+
     /**
      *
      * @return
      */
-    public int getPaivitysmaara(){
+    public int getPaivitysmaara() {
         return this.paivitysmaara;
     }
 
@@ -103,9 +135,6 @@ public class Kalastajapeli {
         this.kalastaja = kalastaja;
     }
 
-    /*   public void setKala(Kala kala) {
-     this.kala = kala;
-     }*/
     /**
      *
      * @return
@@ -151,19 +180,10 @@ public class Kalastajapeli {
      * @return
      */
     public boolean jatkuu() {
-        return jatkuu;
+        
+            return jatkuu;
     }
 
-    /*@Override
-     public void actionPerformed(ActionEvent ae) {
-     if (!jatkuu) {
-     return;
-     }
-
-     paivitaPeli();
-     setDelay(500);
-     }*/
-    
     /**
      * Metodi käy läpi kaikki kalat ja kutsuu Kala-luokan liiku-metodia
      *
@@ -185,8 +205,8 @@ public class Kalastajapeli {
     }
 
     /**
-     * Luo ja liikuttaa kaloja ja kenkiä ja liikuttaa kalastajaa,
-     * sekä lisää päivitysmäärää aina tätä metodia kutsuttaessa
+     * Luo ja liikuttaa kaloja ja kenkiä ja liikuttaa kalastajaa, sekä lisää
+     * päivitysmäärää aina tätä metodia kutsuttaessa
      *
      */
     public void paivitaPeli() {
@@ -194,13 +214,20 @@ public class Kalastajapeli {
         liikutaKenkaa();
         uusiKala();
         uusiKenka();
-
+        for (Kala k : kalat) {
+            if (kalastaja.osuu(k)) {
+                pisteet++;
+                //kalat.remove(k);
+            }
+        }
+        for (Kenka k : kengat) {
+            if (kalastaja.osuu(k)) {
+                sydamet--;
+                //kengat.remove(k);
+            }
+        }
         kalastaja.liiku();
         //paivitettava.paivita();
         paivitysmaara++;
     }
-    
-    /*public void setPaivitettava(Paivitettava paivitettava) {
-     this.paivitettava = paivitettava;
-     }*/
 }
