@@ -98,10 +98,18 @@ public class KalastajapeliTest {
     }
     
     @Test
-    public void jatkuuToimii(){
+    public void jatkuuPalauttaaTrue(){
         Kalastajapeli peli = new Kalastajapeli(10, 20);
         boolean vastaus = peli.jatkuu();
         assertEquals(vastaus,true);
+    }
+    
+    @Test
+    public void jatkuuPalauttaaFalse(){
+        Kalastajapeli peli = new Kalastajapeli(10, 20);
+        peli.setSydamet(0);
+        boolean vastaus = peli.jatkuu();
+        assertEquals(vastaus,false);
     }
     
     @Test
@@ -179,5 +187,39 @@ public class KalastajapeliTest {
         Kalastajapeli peli = new Kalastajapeli(10, 20);
         int vastaus = peli.getPaivitysmaara();
         assertEquals(vastaus, 0);
+    }
+    
+    @Test
+    public void getPisteetToimii(){
+        Kalastajapeli peli = new Kalastajapeli(10, 20);
+        int vastaus = peli.getPisteet();
+        assertEquals(vastaus, 0);
+    }
+    
+    @Test
+    public void getSydametToimii(){
+        Kalastajapeli peli = new Kalastajapeli(10, 20);
+        int vastaus = peli.getSydamet();
+        assertEquals(vastaus, 3);
+    }
+    
+    @Test
+    public void setSydametToimii(){
+        Kalastajapeli peli = new Kalastajapeli(10, 20);
+        peli.setSydamet(2);
+        int vastaus = peli.getSydamet();
+        assertEquals(vastaus, 2);
+    }
+    
+    @Test
+    public void paivitaPisteetToimii(){
+        Kalastajapeli peli = new Kalastajapeli(10, 20);
+        peli.uusiKala();
+        int x = peli.getKala().get(0).getX();
+        int y = peli.getKala().get(0).getY();
+        Kalastaja k = new Kalastaja(peli, x, y,Suunta.ALAS);
+        peli.paivitaPisteet();
+        int vastaus = peli.getPisteet();
+        assertEquals(vastaus, 1);
     }
 }

@@ -50,7 +50,7 @@ public class Kalastajapeli {
         this.korkeus = korkeus;
         //this.jatkuu = true;
         this.pisteet = 0;
-        this.sydamet = 0;
+        this.sydamet = 3;
 
         //addActionListener(this);
         //setInitialDelay(2000);
@@ -77,6 +77,10 @@ public class Kalastajapeli {
      }*/
     public int getSydamet() {
         return sydamet;
+    }
+    
+    public void setSydamet(int sydamet){
+        this.sydamet = sydamet;
     }
 
     public int getPisteet() {
@@ -211,24 +215,31 @@ public class Kalastajapeli {
      *
      */
     public void paivitaPeli() {
-        liikutaKalaa();
-        liikutaKenkaa();
+        paivitaPisteet();
+        paivitaSydamet();
+        
         uusiKala();
         uusiKenka();
+        liikutaKalaa();
+        liikutaKenkaa();
+        kalastaja.liiku();
+        
+        paivitysmaara++;
+    }
+    public void paivitaPisteet(){
         for (Kala k : kalat) {
             if (kalastaja.osuu(k)) {
                 pisteet++;
                 //kalat.remove(k);
             }
         }
+    }
+    public void paivitaSydamet(){
         for (Kenka k : kengat) {
             if (kalastaja.osuu(k)) {
                 sydamet--;
                 //kengat.remove(k);
             }
         }
-        kalastaja.liiku();
-        //paivitettava.paivita();
-        paivitysmaara++;
     }
 }

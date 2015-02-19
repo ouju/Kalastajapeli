@@ -53,17 +53,7 @@ public class Piirtoalusta extends JPanel {
             g.setFont(fontti);
             g.drawString("Peli päättyi! Pisteesi: " + peli.getPisteet(), 200, 250);
 
-        }/*
-         JTextField teksti = new JTextField();
-            
-         Font font = new Font("Helvetica", Font.PLAIN, 30);
-         teksti.setFont(font);
-         teksti.setForeground(Color.BLACK);
-         teksti.setHorizontalAlignment(SwingConstants.CENTER);
-
-            
-         teksti.setText("Peli päättyi! Pisteesi: " + peli.getPisteet());
-         teksti.setEditable(false);*/
+        }
     }
 }
 
