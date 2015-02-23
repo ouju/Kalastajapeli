@@ -1,16 +1,11 @@
 package kalastajapeli.peli;
 
-//import java.awt.event.ActionEvent;
-//import java.awt.event.ActionListener;
 import java.util.ArrayList;
 import java.util.Random;
-import kalastajapeli.oliot.Kala;
-import kalastajapeli.oliot.Kalastaja;
-import kalastajapeli.oliot.Kenka;
-import kalastajapeli.oliot.Suunta;
-//import kalastajapeli.oliot.Pala;
-//import kalastajapeli.kayttoliittyma.Paivitettava;
-//import javax.swing.*;
+import kalastajapeli.hahmot.Kala;
+import kalastajapeli.hahmot.Kalastaja;
+import kalastajapeli.hahmot.Kenka;
+import kalastajapeli.hahmot.Suunta;
 
 /**
  * Luokka määrittää pelin päivittämisen, eli luo ja liikuttaa kaloja, kenkiä ja
@@ -25,11 +20,8 @@ public class Kalastajapeli {
     private ArrayList<Kenka> kengat;
     private int korkeus;
     private int leveys;
-    private boolean jatkuu;
-    //private Paivitettava paivitettava;
+    //private boolean jatkuu;
     private int paivitysmaara;
-    //private Kala kala;
-    //private Kenka kenka;
     private int pisteet;
     private int sydamet;
 
@@ -42,17 +34,14 @@ public class Kalastajapeli {
      * @param korkeus Peli-kkunan korkeus
      */
     public Kalastajapeli(int leveys, int korkeus) {
-        //super(1000, null);
         this.paivitysmaara = 0;
         this.kalat = new ArrayList<>();
         this.kengat = new ArrayList<>();
         this.leveys = leveys;
         this.korkeus = korkeus;
-        //this.jatkuu = true;
         this.pisteet = 0;
         this.sydamet = 3;
 
-        //addActionListener(this);
         //setInitialDelay(2000);
         kalastaja = new Kalastaja(this, 1, 1, Suunta.ALAS);
 
@@ -108,9 +97,7 @@ public class Kalastajapeli {
      *
      */
     public void uusiKala() {
-        // while (true) {
         if (paivitysmaara % 5 == 0) {
-
             Random random = new Random();
             Kala kala = new Kala(leveys, random.nextInt(korkeus), Suunta.VASEN);
             kalat.add(kala);

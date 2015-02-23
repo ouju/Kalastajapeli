@@ -1,4 +1,4 @@
-package kalastajapeli.oliot;
+package kalastajapeli.hahmot;
 
 /**
  * Luokka määrittää ja hakee palan sijainnin ja testaa osuuko kaksi palaa
@@ -38,16 +38,10 @@ public class Pala {
         return y;
     }
 
-    /**
-     * Metodi testaa osuuko pala toiseen palaan
-     *
-     * @param toinen Toinen pala
-     * @return osumisen totuusarvo
-     */
-    public boolean osuu(Pala toinen) {
+    /*public boolean osuu(Pala toinen) {
         return x == toinen.x && y == toinen.y;
     }
-
+*/
     @Override
     public String toString() {
         return "(" + x + "," + y + ")";

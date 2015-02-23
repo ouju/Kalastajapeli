@@ -1,4 +1,4 @@
-package kalastajapeli.oliot;
+package kalastajapeli.hahmot;
 
 public enum Suunta {
 

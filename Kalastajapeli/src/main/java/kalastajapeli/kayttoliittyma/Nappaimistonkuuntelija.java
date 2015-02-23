@@ -2,12 +2,9 @@ package kalastajapeli.kayttoliittyma;
 
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
-import kalastajapeli.oliot.Kalastaja;
-import kalastajapeli.oliot.Suunta;
+import kalastajapeli.hahmot.Kalastaja;
+import kalastajapeli.hahmot.Suunta;
 
-//Käyttöliittymästä sanottiin ircissä ettei tarvitse tehdä javadocia?
-//Siksi tässä paketissa ei niitä ole, eikä kalastajapeli.main
-//-paketissa
 public class Nappaimistonkuuntelija implements KeyListener {
 
     Kalastaja kalastaja;

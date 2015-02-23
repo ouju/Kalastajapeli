@@ -1,8 +1,8 @@
 
 package kalastajapeli.oliot;
 
-import kalastajapeli.oliot.Kenka;
-import kalastajapeli.oliot.Suunta;
+import kalastajapeli.hahmot.Kenka;
+import kalastajapeli.hahmot.Suunta;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;

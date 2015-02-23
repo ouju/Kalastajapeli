@@ -4,13 +4,10 @@ import java.awt.Color;
 import java.awt.Font;
 import java.awt.Graphics;
 import javax.swing.JPanel;
-import kalastajapeli.oliot.Kala;
-import kalastajapeli.oliot.Kenka;
+import kalastajapeli.hahmot.Kala;
+import kalastajapeli.hahmot.Kenka;
 import kalastajapeli.peli.Kalastajapeli;
 
-//Käyttöliittymästä sanottiin ircissä ettei tarvitse tehdä javadocia?
-//Siksi tässä paketissa ei niitä ole, eikä kalastajapeli.main
-//-paketissa
 public class Piirtoalusta extends JPanel {
 
     private Kalastajapeli peli;
@@ -42,9 +39,8 @@ public class Piirtoalusta extends JPanel {
                 g.fillOval(sivu * k.getX(), sivu * k.getY(), sivu, sivu);
             }
             g.setColor(Color.BLACK);
-            //for (Pala p : peli.getKalastaja().getPalat()) {
             g.fillOval(sivu * peli.getKalastaja().getX(), sivu * peli.getKalastaja().getY(), sivu, sivu + 10);
-            //}
+            
         } else {
             Font fontti = new Font("Candara", Font.BOLD, 50);
             g.setFont(fontti);

@@ -1,7 +1,5 @@
-package kalastajapeli.oliot;
+package kalastajapeli.hahmot;
 
-import java.util.ArrayList;
-import java.util.List;
 import kalastajapeli.peli.Kalastajapeli;
 
 /**
@@ -12,13 +10,10 @@ import kalastajapeli.peli.Kalastajapeli;
  */
 public class Kalastaja {
 
-    //private List<Pala> palat;
     private int x;
     private int y;
     private Suunta suunta;
     private Kalastajapeli peli;
-    //private int leveys;
-    //private int korkeus;
 
     /**
      * Konstruktori määrittelee Kalastajan ominaisuudet
@@ -31,10 +26,6 @@ public class Kalastaja {
     public Kalastaja(Kalastajapeli peli, int x, int y, Suunta suunta) {
         this.x = x;
         this.y = y;
-        //this.leveys = leveys;
-        //this.korkeus = korkeus;
-        //this.palat = new ArrayList<Pala>();
-        //this.palat.add(new Pala(x, y));
         this.suunta = Suunta.ALAS;
         this.peli = peli;
     }
@@ -62,9 +53,6 @@ public class Kalastaja {
     public int getY() {
         return y;
     }
-    /*public List<Pala> getPalat() {
-     return palat;
-     }*/
 
     /**
      *
@@ -89,11 +77,9 @@ public class Kalastaja {
      * @return osumisen totuusarvo
      */
     public boolean osuu(Pala pala) {
-        //for (Pala p : palat) {
         if (this.getX() == pala.getX() && this.getY() == pala.getY()) {
             return true;
         }
-        //}
         return false;
     }
 
@@ -104,9 +90,6 @@ public class Kalastaja {
      *
      */
     public void liiku() {
-        //int uusiX = palat.get(palat.size() - 1).getX();
-        //int uusiY = palat.get(palat.size() - 1).getY();
-
         if (suunta == Suunta.ALAS) {
             y++;
         } else if (suunta == Suunta.YLOS) {
@@ -119,10 +102,7 @@ public class Kalastaja {
                 suunta = Suunta.ALAS;
             }
         }
-        //palat.remove(0);
-        //palat.add(new Pala(x, y));
     }
-    
 
     /**
      * Metodi tarkistaa osuuko kalastaja ylä- tai alalaitaan

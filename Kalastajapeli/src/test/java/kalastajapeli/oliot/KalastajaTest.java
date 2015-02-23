@@ -4,9 +4,9 @@
  */
 package kalastajapeli.oliot;
 
-import kalastajapeli.oliot.Kalastaja;
-import kalastajapeli.oliot.Pala;
-import kalastajapeli.oliot.Suunta;
+import kalastajapeli.hahmot.Kalastaja;
+import kalastajapeli.hahmot.Pala;
+import kalastajapeli.hahmot.Suunta;
 import kalastajapeli.peli.Kalastajapeli;
 import org.junit.After;
 import org.junit.AfterClass;

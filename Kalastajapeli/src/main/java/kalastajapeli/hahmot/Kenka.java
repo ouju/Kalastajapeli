@@ -1,8 +1,6 @@
-package kalastajapeli.oliot;
+package kalastajapeli.hahmot;
 
 import java.util.ArrayList;
-//import java.util.Random;
-//import kalastajapeli.peli.Kalastajapeli;
 
 /**
  * Luokka määrittelee kengän ja sen liikkumismetodin
@@ -13,8 +11,6 @@ public class Kenka extends Pala {
 
     private Suunta suunta;
     private ArrayList<Pala> palat;
-    //private ArrayList<Kenka> kengat;
-    //private Kalastajapeli peli;
 
     /**
      * Konstruktori määrittää kengän ominaisuudet
@@ -28,9 +24,8 @@ public class Kenka extends Pala {
         this.suunta = Suunta.VASEN;
         this.palat = new ArrayList<>();
         this.palat.add(new Pala(x, y));
-        //this.kengat = new ArrayList<Kenka>();
     }
-    
+
     /**
      *
      * @return
@@ -44,13 +39,7 @@ public class Kenka extends Pala {
      *
      */
     public void liiku() {
-        //int uusiX = palat.get(palat.size() - 1).getX();
-        //int uusiY = palat.get(palat.size() - 1).getY();
-
-        if (suunta == Suunta.VASEN) {
-            x--;
-        }
-        //palat.remove(0);
+        x--;
         palat.add(new Pala(x, y));
     }
 }

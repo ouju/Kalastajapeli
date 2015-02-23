@@ -39,7 +39,7 @@
                 <configuration>
                     <instrumentation>
                         <includes>
-                            <include>kalastajapeli.oliot.*</include>
+                            <include>kalastajapeli.hahmot.*</include>
                             <include>kalastajapeli.peli.*</include>
                         </includes>
                     </instrumentation>
@@ -52,11 +52,11 @@
                 <version>0.30</version>
                 <configuration>
                     <targetClasses>
-                        <param>kalastajapeli.oliot.*</param>
+                        <param>kalastajapeli.hahmot.*</param>
                         <param>kalastajapeli.peli.*</param>
                     </targetClasses>
                     <targetTests>
-                        <param>kalastajapeli.oliot.*</param>
+                        <param>kalastajapeli.hahmot.*</param>
                         <param>kalastajapeli.peli.*</param>
                     </targetTests>
                 </configuration>
