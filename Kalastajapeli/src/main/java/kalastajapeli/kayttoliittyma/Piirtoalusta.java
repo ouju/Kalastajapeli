@@ -25,7 +25,10 @@ public class Piirtoalusta extends JPanel {
     @Override
     public void paintComponent(Graphics g) {
         super.paintComponent(g);
+
         if (peli.jatkuu()) {
+            g.setColor(Color.cyan);
+            g.fillRect(0, 0, sivu * peli.getLeveys() + 25, sivu * peli.getKorkeus() + 25);
             g.setColor(Color.red);
             for (int i = 0; i < peli.getSydamet(); i++) {
                 g.fillOval(sivu + i * 30, sivu, 20, 20);
@@ -40,7 +43,9 @@ public class Piirtoalusta extends JPanel {
             }
             g.setColor(Color.BLACK);
             g.fillOval(sivu * peli.getKalastaja().getX(), sivu * peli.getKalastaja().getY(), sivu, sivu + 10);
-            
+            Font fontti = new Font("Candara", Font.BOLD, 25);
+            g.setFont(fontti);
+            g.drawString("" + peli.getPisteet(), sivu * peli.getLeveys(), sivu + 10);
         } else {
             Font fontti = new Font("Candara", Font.BOLD, 50);
             g.setFont(fontti);
@@ -49,4 +54,3 @@ public class Piirtoalusta extends JPanel {
         }
     }
 }
-

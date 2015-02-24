@@ -185,8 +185,8 @@ public class Kalastajapeli {
     }
 
     /**
-     * Paivittaa pisteet ja sydänmäärät, luo ja liikuttaa kaloja ja kenkiä 
-     * ja liikuttaa kalastajaa, sekä lisää päivitysmäärää aina tätä metodia 
+     * Paivittaa pisteet ja sydänmäärät, luo ja liikuttaa kaloja ja kenkiä ja
+     * liikuttaa kalastajaa, sekä lisää päivitysmäärää aina tätä metodia
      * kutsuttaessa
      *
      */
@@ -208,12 +208,15 @@ public class Kalastajapeli {
      *
      */
     public void paivitaPisteet() {
+        ArrayList<Kala> poistettavat = new ArrayList<>();
         for (Kala k : kalat) {
             if (kalastaja.osuu(k)) {
                 pisteet++;
-                //kalat.remove(k);
-                //kalat.remove(kalat.indexOf(k));
+                poistettavat.add(k);
             }
+        }
+        if (!poistettavat.isEmpty()) {
+            kalat.remove(poistettavat.get(0));
         }
     }
 
@@ -222,11 +225,15 @@ public class Kalastajapeli {
      *
      */
     public void paivitaSydamet() {
+        ArrayList<Kenka> poistettavat = new ArrayList<>();
         for (Kenka k : kengat) {
             if (kalastaja.osuu(k)) {
                 sydamet--;
-                //kengat.remove(k);
+                poistettavat.add(k);
             }
+        }
+        if (!poistettavat.isEmpty()) {
+            kengat.remove(poistettavat.get(0));
         }
     }
 }
