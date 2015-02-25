@@ -8,16 +8,30 @@ import kalastajapeli.hahmot.Kala;
 import kalastajapeli.hahmot.Kenka;
 import kalastajapeli.peli.Kalastajapeli;
 
+/**
+ * Luo pelille piirrettävät hahmot ja tekstit
+ *
+ * @author Outi
+ */
 public class Piirtoalusta extends JPanel {
 
     private Kalastajapeli peli;
     private int sivu;
 
+    /**
+     *
+     * @param peli
+     * @param palanSivunPituus
+     */
     public Piirtoalusta(Kalastajapeli peli, int palanSivunPituus) {
         this.peli = peli;
         this.sivu = palanSivunPituus;
     }
 
+    /**
+     * Päivittää alustaa
+     *
+     */
     public void paivita() {
         repaint();
     }

@@ -9,7 +9,7 @@ import kalastajapeli.hahmot.Suunta;
 
 /**
  * Luokka määrittää pelin päivittämisen, eli luo ja liikuttaa kaloja, kenkiä ja
- * kalastajaa sekä pitää laskua päivitysmääristä
+ * kalastajaa sekä pitää laskua päivitysmääristä, pisteistä ja elämistä
  *
  * @author Outi
  */
@@ -20,15 +20,16 @@ public class Kalastajapeli {
     private ArrayList<Kenka> kengat;
     private int korkeus;
     private int leveys;
-    //private boolean jatkuu;
     private int paivitysmaara;
     private int pisteet;
     private int sydamet;
+    private int i;
 
     /**
      * Konstruktori määrittää ikkunalle leveyden ja korkeuden ja muuttujat, luo
-     * alas päin kulkevan kalastajan vasempaan yläkulmaan ja kutsuu
-     * actionPerformed-metodia
+     * alas päin kulkevan kalastajan vasempaan yläkulmaan, määrittää alkuun
+     * pistemääräksi nolla ja sydänmääräksi kolme ja alustaa kalat- ja
+     * kengät-listat
      *
      * @param leveys Peli-ikkunan leveys
      * @param korkeus Peli-kkunan korkeus
@@ -41,6 +42,7 @@ public class Kalastajapeli {
         this.korkeus = korkeus;
         this.pisteet = 0;
         this.sydamet = 3;
+        this.i = 9;
 
         //setInitialDelay(2000);
         kalastaja = new Kalastaja(this, 1, 1, Suunta.ALAS);
@@ -85,7 +87,11 @@ public class Kalastajapeli {
      *
      */
     public void uusiKenka() {
-        if (paivitysmaara % 9 == 0) {
+
+        if (paivitysmaara % 30 == 0 && i > 1) {
+            i--;
+        }
+        if (paivitysmaara % i == 0) {
             Random random = new Random();
             kengat.add(new Kenka(leveys, random.nextInt(korkeus), Suunta.VASEN));
         }
@@ -204,7 +210,7 @@ public class Kalastajapeli {
     }
 
     /**
-     * Kalastajan osuessa kalaan se saa yhden pisteen
+     * Kalastajan osuessa kalaan se saa yhden pisteen ja kala poistuu näkyvistä
      *
      */
     public void paivitaPisteet() {
@@ -221,7 +227,8 @@ public class Kalastajapeli {
     }
 
     /**
-     * Kalastajan osuessa kenkään se menettää yhden sydämen
+     * Kalastajan osuessa kenkään se menettää yhden sydämen ja kenkä poistuu
+     * näkyvistä
      *
      */
     public void paivitaSydamet() {
