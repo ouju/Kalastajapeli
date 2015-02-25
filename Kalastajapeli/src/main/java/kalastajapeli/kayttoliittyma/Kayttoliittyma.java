@@ -2,6 +2,8 @@ package kalastajapeli.kayttoliittyma;
 
 import java.awt.Container;
 import java.awt.Dimension;
+import java.awt.Image;
+import java.awt.Toolkit;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JFrame;
@@ -14,6 +16,7 @@ public class Kayttoliittyma implements Runnable {
     private int sivunPituus;
     private JFrame frame;
     private Piirtoalusta alusta;
+    private Image kuva;
 
     public Kayttoliittyma(Kalastajapeli peli, int pituus) {
 

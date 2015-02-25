@@ -15,7 +15,7 @@ public class Main {
      * @param args
      */
     public static void main(String[] args) {        
-        Kalastajapeli peli = new Kalastajapeli(30, 20);
+        Kalastajapeli peli = new Kalastajapeli(25, 19);
         Kayttoliittyma liittyma = new Kayttoliittyma(peli, 30);
         liittyma.run();
     }
