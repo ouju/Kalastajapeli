@@ -74,3 +74,11 @@ Deadline 5
 
 19.2.2015, klo 14-23 & 00-02
 Uusien ominaisuuksien lisäämistä, kuten pisteiden lasku, sydämien piirtäminen ja väheneminen, sekä lopputekstin asettaminen. Testit uusille metodeille. Pari uutta sekvenssikaaviota ja vanhojen päivitys
+
+Deadline 6
+
+24.2.2015, klo 12-14
+Koodin parantelua pajassa, kengät ja kalat katoaa niihin osuttaessa
+
+25.2.2015, klo 20-
+Hahmojen kuvakkeiden ja taustakuvan asettaminen, mittasuhteiden tutkiskelua
