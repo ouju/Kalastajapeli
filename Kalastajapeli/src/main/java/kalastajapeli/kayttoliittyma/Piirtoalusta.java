@@ -45,28 +45,26 @@ public class Piirtoalusta extends JPanel {
         ImageIcon tausta = new ImageIcon(this.getClass().getResource("vesi.jpg"));
         g.drawImage(tausta.getImage(), 0, 0, null);
         if (peli.jatkuu()) {
-            //g.setColor(Color.cyan);
-            //g.fillRect(0, 0, sivu * peli.getLeveys() + 25, sivu * peli.getKorkeus() + 25);
             g.setColor(Color.red);
             for (int i = 0; i < peli.getSydamet(); i++) {
-                g.fillOval(sivu + i * 30, sivu, 20, 20);
+                //g.fillOval(sivu + i * 30, sivu, 20, 20);
+                ImageIcon sydan = new ImageIcon(this.getClass().getResource("sydan.gif"));
+                g.drawImage(sydan.getImage(), sivu+i*30, sivu, null);
             }
             g.setColor(Color.BLUE);
             for (Kala k : peli.getKala()) {
                 ImageIcon kalastaja = new ImageIcon(this.getClass().getResource("kala.gif"));
                 g.drawImage(kalastaja.getImage(), sivu * k.getX(), sivu * k.getY(), null);
-                //g.fillOval(sivu * k.getX(), sivu * k.getY(), sivu + 10, sivu);
             }
             g.setColor(Color.GRAY);
             for (Kenka k : peli.getKenka()) {
                 ImageIcon kalastaja = new ImageIcon(this.getClass().getResource("kenka.gif"));
                 g.drawImage(kalastaja.getImage(), sivu * k.getX(), sivu * k.getY(), null);
-                //g.fillOval(sivu * k.getX(), sivu * k.getY(), sivu, sivu);
             }
             g.setColor(Color.BLACK);
             ImageIcon kalastaja = new ImageIcon(this.getClass().getResource("kalastaja.gif"));
             g.drawImage(kalastaja.getImage(), sivu * peli.getKalastaja().getX(), sivu * peli.getKalastaja().getY(), null);
-            //g.fillOval(sivu * peli.getKalastaja().getX(), sivu * peli.getKalastaja().getY(), sivu, sivu + 10);
+            
             Font fontti = new Font("Candara", Font.BOLD, 25);
             g.setFont(fontti);
             g.drawString("" + peli.getPisteet(), sivu * peli.getLeveys(), sivu + 10);

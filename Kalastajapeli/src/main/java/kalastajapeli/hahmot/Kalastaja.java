@@ -110,7 +110,7 @@ public class Kalastaja {
      * @return osumisen totuusarvo
      */
     public boolean kalastajaOsuuLaitaan() {
-        if (y == peli.getKorkeus() || y == -1) {
+        if (y >= peli.getKorkeus()-1 || y <= -1) {
             return true;
         }
         return false;

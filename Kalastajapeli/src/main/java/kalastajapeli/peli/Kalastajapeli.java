@@ -44,9 +44,7 @@ public class Kalastajapeli {
         this.sydamet = 3;
         this.i = 9;
 
-        //setInitialDelay(2000);
         kalastaja = new Kalastaja(this, 1, 1, Suunta.ALAS);
-
     }
 
     /**
@@ -88,7 +86,7 @@ public class Kalastajapeli {
      */
     public void uusiKenka() {
 
-        if (paivitysmaara % 30 == 0 && i > 1) {
+        if (paivitysmaara % 60 == 0 && i > 1) {
             i--;
         }
         if (paivitysmaara % i == 0) {
