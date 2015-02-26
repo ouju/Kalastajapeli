@@ -21,31 +21,26 @@ public class Main {
      * @param args
      */
     public static void main(String[] args) {
-        JFrame frame = new JFrame("Kalastajapeli");
-        frame.setVisible(true);
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.setSize(300, 300);
-        JPanel panel = new JPanel();
-        frame.add(panel);
-        JButton nappi = new JButton("Aloita peli");
-        panel.add(nappi);
-        //nappi.addActionListener(new Action());
+        /*JFrame frame = new JFrame("Kalastajapeli");
+         frame.setVisible(true);
+         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+         frame.setSize(300, 300);
+         frame.setResizable(false);
+        
+         JPanel panel = new JPanel();
+         frame.add(panel);
+        
+         JButton nappi = new JButton("Aloita peli");
+         panel.add(nappi);
+         nappi.addActionListener(new Action());*/
 
         Kalastajapeli peli = new Kalastajapeli(25, 19);
         Kayttoliittyma liittyma = new Kayttoliittyma(peli, 30);
-        liittyma.run();
-    }
-
-    /*static class Action implements ActionListener {
-
-        @Override
-        public void actionPerformed(ActionEvent e) {
-            System.out.println("Käynnistetään...");
-            Kalastajapeli peli = new Kalastajapeli(25, 19);
-            Kayttoliittyma liittyma = new Kayttoliittyma(peli, 30);
+        //liittyma.aloita();
+        //liittyma.kaynnista();
+        if (liittyma.kayntiin()) {
+            System.out.println("moi");
             liittyma.run();
         }
-
-        
-    }*/
+    }
 }

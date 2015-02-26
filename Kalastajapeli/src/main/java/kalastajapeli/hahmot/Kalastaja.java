@@ -77,7 +77,7 @@ public class Kalastaja {
      * @return osumisen totuusarvo
      */
     public boolean osuu(Pala pala) {
-        if (this.getX() == pala.getX() && this.getY() == pala.getY()) {
+        if (this.getX()+2 == pala.getX() && this.getY() == pala.getY()) {
             return true;
         }
         return false;
