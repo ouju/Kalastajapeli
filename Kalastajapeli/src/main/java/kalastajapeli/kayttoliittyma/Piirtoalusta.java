@@ -3,8 +3,6 @@ package kalastajapeli.kayttoliittyma;
 import java.awt.Color;
 import java.awt.Font;
 import java.awt.Graphics;
-import java.awt.Image;
-import java.awt.Toolkit;
 import javax.swing.ImageIcon;
 import javax.swing.JPanel;
 import kalastajapeli.hahmot.Kala;
@@ -42,27 +40,27 @@ public class Piirtoalusta extends JPanel {
     @Override
     public void paintComponent(Graphics g) {
         super.paintComponent(g);
-        ImageIcon tausta = new ImageIcon(this.getClass().getResource("vesi.jpg"));
+        ImageIcon tausta = new ImageIcon(this.getClass().getResource("/vesi.jpg"));
         g.drawImage(tausta.getImage(), 0, 0, null);
         if (peli.jatkuu()) {
             g.setColor(Color.red);
             for (int i = 0; i < peli.getSydamet(); i++) {
                 //g.fillOval(sivu + i * 30, sivu, 20, 20);
-                ImageIcon sydan = new ImageIcon(this.getClass().getResource("sydan.gif"));
+                ImageIcon sydan = new ImageIcon(this.getClass().getResource("/sydan.gif"));
                 g.drawImage(sydan.getImage(), sivu+i*30, sivu, null);
             }
             g.setColor(Color.BLUE);
             for (Kala k : peli.getKala()) {
-                ImageIcon kalastaja = new ImageIcon(this.getClass().getResource("kala.gif"));
+                ImageIcon kalastaja = new ImageIcon(this.getClass().getResource("/kala.gif"));
                 g.drawImage(kalastaja.getImage(), sivu * k.getX(), sivu * k.getY(), null);
             }
             g.setColor(Color.GRAY);
             for (Kenka k : peli.getKenka()) {
-                ImageIcon kalastaja = new ImageIcon(this.getClass().getResource("kenka.gif"));
+                ImageIcon kalastaja = new ImageIcon(this.getClass().getResource("/kenka.gif"));
                 g.drawImage(kalastaja.getImage(), sivu * k.getX(), sivu * k.getY(), null);
             }
             g.setColor(Color.BLACK);
-            ImageIcon kalastaja = new ImageIcon(this.getClass().getResource("kalastaja.gif"));
+            ImageIcon kalastaja = new ImageIcon(this.getClass().getResource("/kalastaja.gif"));
             g.drawImage(kalastaja.getImage(), sivu * peli.getKalastaja().getX(), sivu * peli.getKalastaja().getY(), null);
             
             Font fontti = new Font("Candara", Font.BOLD, 25);
