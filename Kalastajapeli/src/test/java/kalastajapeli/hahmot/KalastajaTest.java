@@ -2,7 +2,7 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-package kalastajapeli.oliot;
+package kalastajapeli.hahmot;
 
 import kalastajapeli.hahmot.Kalastaja;
 import kalastajapeli.hahmot.Pala;
@@ -138,7 +138,7 @@ public class KalastajaTest {
     @Test
     public void osuuPalauttaaTrueKunPalatOsuu() {
         Kalastaja k = new Kalastaja(new Kalastajapeli(10,20), 1, 2, Suunta.ALAS);
-        Pala p = new Pala(1, 2);
+        Pala p = new Pala(3, 2);
         boolean vastaus = k.osuu(p);
         assertEquals(vastaus, true);
     }
@@ -184,7 +184,7 @@ public class KalastajaTest {
     
     @Test
     public void kalastajaLiikkuuYlosOsuttuaanAlalaitaan(){
-        Kalastaja k = new Kalastaja(new Kalastajapeli(10,20), 1, 19, Suunta.ALAS);
+        Kalastaja k = new Kalastaja(new Kalastajapeli(10,20), 1, 18, Suunta.ALAS);
         k.liiku();
         k.liiku();
         Suunta vastaus = k.getSuunta();

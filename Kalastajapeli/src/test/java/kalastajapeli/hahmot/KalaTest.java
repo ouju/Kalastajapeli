@@ -1,5 +1,5 @@
 
-package kalastajapeli.oliot;
+package kalastajapeli.hahmot;
 
 import java.util.ArrayList;
 import kalastajapeli.hahmot.Kala;

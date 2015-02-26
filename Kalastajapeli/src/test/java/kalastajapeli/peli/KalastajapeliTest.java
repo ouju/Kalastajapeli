@@ -188,7 +188,7 @@ public class KalastajapeliTest {
         peli.uusiKala();
         int x = peli.getKala().get(0).getX();
         int y = peli.getKala().get(0).getY();
-        Kalastaja k = new Kalastaja(peli, x, y, Suunta.ALAS);
+        Kalastaja k = new Kalastaja(peli, x-2, y, Suunta.ALAS);
         peli.setKalastaja(k);
         peli.paivitaPeli();
         int vastaus = peli.getPisteet();
@@ -201,7 +201,7 @@ public class KalastajapeliTest {
         peli.uusiKenka();
         int x = peli.getKenka().get(0).getX();
         int y = peli.getKenka().get(0).getY();
-        Kalastaja k = new Kalastaja(peli, x, y, Suunta.ALAS);
+        Kalastaja k = new Kalastaja(peli, x-2, y, Suunta.ALAS);
         peli.setKalastaja(k);
         peli.paivitaPeli();
         int vastaus = peli.getSydamet();
@@ -243,7 +243,7 @@ public class KalastajapeliTest {
         peli.uusiKala();
         int x = peli.getKala().get(0).getX();
         int y = peli.getKala().get(0).getY();
-        Kalastaja k = new Kalastaja(peli, x, y, Suunta.ALAS);
+        Kalastaja k = new Kalastaja(peli, x-2, y, Suunta.ALAS);
         peli.setKalastaja(k);
         peli.paivitaPisteet();
         int vastaus = peli.getPisteet();
@@ -256,7 +256,7 @@ public class KalastajapeliTest {
         peli.uusiKenka();
         int x = peli.getKenka().get(0).getX();
         int y = peli.getKenka().get(0).getY();
-        Kalastaja k = new Kalastaja(peli, x, y, Suunta.ALAS);
+        Kalastaja k = new Kalastaja(peli, x-2, y, Suunta.ALAS);
         peli.setKalastaja(k);
         peli.paivitaSydamet();
         int vastaus = peli.getSydamet();
@@ -264,9 +264,9 @@ public class KalastajapeliTest {
     }
 
     @Test
-    public void uusiKenkaKunPaivitysmaaraYsi() {
-        Kalastajapeli peli = new Kalastajapeli(10, 20);
-        for (int i = 0; i < 10 ; i++) {
+    public void uusiKenkaKunPaivitysmaaraKymmenen() {
+        Kalastajapeli peli = new Kalastajapeli(20, 20);
+        for (int i = 0; i <= 10 ; i++) {
             peli.paivitaPeli();
         }
         int vastaus = peli.getKenka().size();

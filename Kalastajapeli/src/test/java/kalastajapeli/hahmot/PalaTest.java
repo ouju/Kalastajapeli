@@ -1,5 +1,5 @@
 
-package kalastajapeli.oliot;
+package kalastajapeli.hahmot;
 
 import kalastajapeli.hahmot.Pala;
 import org.junit.After;

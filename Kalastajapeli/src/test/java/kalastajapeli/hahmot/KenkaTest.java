@@ -1,5 +1,5 @@
 
-package kalastajapeli.oliot;
+package kalastajapeli.hahmot;
 
 import kalastajapeli.hahmot.Kenka;
 import kalastajapeli.hahmot.Suunta;
