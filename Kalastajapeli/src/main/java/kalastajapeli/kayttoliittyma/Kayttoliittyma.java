@@ -36,7 +36,7 @@ public class Kayttoliittyma implements Runnable {
         panel.add(nappi);
         nappi.addActionListener(new Action());
         System.out.println("1");
-
+        //run();
        
         
     }
@@ -57,6 +57,7 @@ public class Kayttoliittyma implements Runnable {
         frame.setVisible(true);
         frame.setResizable(false);
         System.out.println("4");
+        //run();
     }
 
     public class Action implements ActionListener {
