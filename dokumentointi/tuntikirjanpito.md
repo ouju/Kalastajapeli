@@ -82,3 +82,11 @@ Koodin parantelua pajassa, kengät ja kalat katoaa niihin osuttaessa
 
 25.2.2015, klo 20-01:30
 Hahmojen kuvakkeiden ja taustakuvan asettaminen, mittasuhteiden tutkiskelua. Yritys laittaa aloitusnappi, mutta vielä ei onnistunut. Peli ei lähde käyntiin nappia klikkaamalla
+
+26.2.2015, klo 20-24
+Aloitusnapin valmiiksi saaminen
+
+27.2.2015, klo 20-24
+Viimeistely
+
+Valmista!
