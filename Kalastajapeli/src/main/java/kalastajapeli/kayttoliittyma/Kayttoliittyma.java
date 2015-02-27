@@ -1,11 +1,15 @@
 package kalastajapeli.kayttoliittyma;
 
+import java.awt.BorderLayout;
 import java.awt.Container;
 import java.awt.Dimension;
+import java.awt.FlowLayout;
+import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.swing.BorderFactory;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
@@ -28,10 +32,13 @@ public class Kayttoliittyma implements Runnable {
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setSize(300, 300);
         frame.setResizable(false);
+        
+        JButton nappi = new JButton("Olen valmis!");
         JPanel panel = new JPanel();
+        panel.setBorder(BorderFactory.createEmptyBorder(100,60,120,60));
+        panel.setLayout(new GridLayout());
+        panel.add(nappi, BorderLayout.CENTER);
         frame.add(panel);
-        JButton nappi = new JButton("Aloita peli");
-        panel.add(nappi);
         nappi.addActionListener(new Action());
         saie = new Thread(this);
     }
