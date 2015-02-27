@@ -8,3 +8,6 @@ Pelaaja
 
 Pelaajan toiminnot:
 Siirrellä pelihahmoaan ylös ja alas, ja kerätä ja väistellä vastaan tulevia asioita
+
+Rakennekuvaus:
+Kenka ja Kala toteuttaa Pala-luokan, joka tuntee Suunta:n, jonka myös Kalastaja tuntee. Piirtoalusta toteuttaa abstraktin JPanelin. Kayttoliittyma kutsuu Piirtoalustaa, toteuttaa rajapinnan Runnable ja tuntee Nappaimistonkuuntelija, joka toteuttaa rajapinnan KeyListener ja liikuttaa Kalastajaa. Kalastajapeli tuntee Kayttoliittyman. Mainissa luodaan Kalastajapeli ja Kayttoliittyma.
