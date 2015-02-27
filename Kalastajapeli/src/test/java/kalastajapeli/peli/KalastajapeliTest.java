@@ -35,7 +35,12 @@ public class KalastajapeliTest {
     @After
     public void tearDown() {
     }
-
+    @Test
+    public void getUusintaToimii(){
+        Kalastajapeli peli = new Kalastajapeli(10, 20);
+        int vastaus = peli.getUusinta();
+        assertEquals(vastaus, 9);
+    }
     @Test
     public void uusiKalaToimii() {
         Kalastajapeli peli = new Kalastajapeli(10, 20);
@@ -44,6 +49,16 @@ public class KalastajapeliTest {
         }
         int vastaus = peli.getKala().size();
         assertEquals(vastaus, 5);
+    }
+    @Test
+    public void uusiKenkaToimiiPaivitysmaaralla60() {
+        Kalastajapeli peli = new Kalastajapeli(10, 20);
+        for (int i = 0; i < 60; i++) {
+            peli.uusiKenka();
+            peli.paivitaPeli();
+        }
+        int vastaus = peli.getUusinta();
+        assertEquals(vastaus, 7);
     }
 
     @Test
@@ -188,7 +203,7 @@ public class KalastajapeliTest {
         peli.uusiKala();
         int x = peli.getKala().get(0).getX();
         int y = peli.getKala().get(0).getY();
-        Kalastaja k = new Kalastaja(peli, x-2, y, Suunta.ALAS);
+        Kalastaja k = new Kalastaja(peli, x-3, y, Suunta.ALAS);
         peli.setKalastaja(k);
         peli.paivitaPeli();
         int vastaus = peli.getPisteet();
@@ -201,7 +216,7 @@ public class KalastajapeliTest {
         peli.uusiKenka();
         int x = peli.getKenka().get(0).getX();
         int y = peli.getKenka().get(0).getY();
-        Kalastaja k = new Kalastaja(peli, x-2, y, Suunta.ALAS);
+        Kalastaja k = new Kalastaja(peli, x-3, y, Suunta.ALAS);
         peli.setKalastaja(k);
         peli.paivitaPeli();
         int vastaus = peli.getSydamet();
@@ -243,7 +258,7 @@ public class KalastajapeliTest {
         peli.uusiKala();
         int x = peli.getKala().get(0).getX();
         int y = peli.getKala().get(0).getY();
-        Kalastaja k = new Kalastaja(peli, x-2, y, Suunta.ALAS);
+        Kalastaja k = new Kalastaja(peli, x-3, y, Suunta.ALAS);
         peli.setKalastaja(k);
         peli.paivitaPisteet();
         int vastaus = peli.getPisteet();
@@ -256,7 +271,7 @@ public class KalastajapeliTest {
         peli.uusiKenka();
         int x = peli.getKenka().get(0).getX();
         int y = peli.getKenka().get(0).getY();
-        Kalastaja k = new Kalastaja(peli, x-2, y, Suunta.ALAS);
+        Kalastaja k = new Kalastaja(peli, x-3, y, Suunta.ALAS);
         peli.setKalastaja(k);
         peli.paivitaSydamet();
         int vastaus = peli.getSydamet();
@@ -275,7 +290,7 @@ public class KalastajapeliTest {
     
     @Test
     public void uusiKalaKunPaivitysmaaraViisi() {
-        Kalastajapeli peli = new Kalastajapeli(10, 20);
+        Kalastajapeli peli = new Kalastajapeli(14, 20);
         for (int i = 0; i < 6 ; i++) {
             peli.paivitaPeli();
         }

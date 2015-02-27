@@ -5,6 +5,7 @@ import kalastajapeli.peli.Kalastajapeli;
 /**
  * Luokka määrittää, palauttaa ja asettaa kalastajan sijainnin ja suunnan,
  * määrittää liikkumistoiminnon ja tarkistaa osuuko kalastaja palaan
+ * tai laitaan
  *
  * @author Outi
  */

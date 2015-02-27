@@ -3,12 +3,9 @@ package kalastajapeli.kayttoliittyma;
 import java.awt.BorderLayout;
 import java.awt.Container;
 import java.awt.Dimension;
-import java.awt.FlowLayout;
 import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import javax.swing.BorderFactory;
 import javax.swing.JButton;
 import javax.swing.JFrame;
@@ -16,6 +13,12 @@ import javax.swing.JPanel;
 import javax.swing.WindowConstants;
 import kalastajapeli.peli.Kalastajapeli;
 
+/**
+ * Määrittelee aloitus- ja peli-ikkunan, luo komponentit ja kutsuu
+ * run-metodia
+ *
+ * @author Outi
+ */
 public class Kayttoliittyma implements Runnable {
 
     private Kalastajapeli peli;
@@ -24,6 +27,12 @@ public class Kayttoliittyma implements Runnable {
     private Piirtoalusta alusta;
     Thread saie;
 
+    /**
+     * Luo aloitusikkunan ja aloitusnapin
+     *
+     * @param peli Kalastajapeli
+     * @param pituus Sivun pituus
+     */
     public Kayttoliittyma(Kalastajapeli peli, int pituus) {
         this.peli = peli;
         this.sivunPituus = pituus;
@@ -43,6 +52,10 @@ public class Kayttoliittyma implements Runnable {
         saie = new Thread(this);
     }
 
+    /**
+     * Luo peli-ikkunan
+     *
+     */
     public void kaynnista() {
         frame = new JFrame("Kalastajapeli");
         int leveys = (peli.getLeveys() + 1) * sivunPituus + 10;
@@ -57,6 +70,10 @@ public class Kayttoliittyma implements Runnable {
         saie.start();
     }
 
+    /**
+     * Kutsuu kaynnista-metodia
+     *
+     */
     public class Action implements ActionListener {
 
         @Override
@@ -73,8 +90,8 @@ public class Kayttoliittyma implements Runnable {
             alusta.paivita();
             try {
                 saie.sleep(400);
-            } catch (InterruptedException ex) {
-                Logger.getLogger(Kayttoliittyma.class.getName()).log(Level.SEVERE, null, ex);
+            } catch (Exception e) {
+                System.out.println("Virhe: " + e.getMessage());
             }
         }
     }
@@ -86,6 +103,10 @@ public class Kayttoliittyma implements Runnable {
         getFrame().addKeyListener(nk);
     }
 
+    /**
+     *
+     * @return
+     */
     public JFrame getFrame() {
         return frame;
     }

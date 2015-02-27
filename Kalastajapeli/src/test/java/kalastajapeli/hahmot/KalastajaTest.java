@@ -107,13 +107,6 @@ public class KalastajaTest {
         assertEquals(vastaus, Suunta.YLOS);
     }
 
-    /*  @Test
-     public void setYToimii(){
-     Kalastaja kalastaja = new Kalastaja(1,1, Suunta.ALAS);
-     kalastaja.setY(2);
-     int vastaus = kalastaja.getY();
-     assertEquals(vastaus, 2);
-     }*/
     @Test
     public void konstruktorinLeveydenMaaritysToimii() {
         Kalastaja kalastaja = new Kalastaja(new Kalastajapeli(10,20), 1, 2, Suunta.ALAS);
@@ -136,9 +129,37 @@ public class KalastajaTest {
     }
 
     @Test
+    public void osuuPalauttaaTrueKunPalatOsuu1() {
+        Kalastaja k = new Kalastaja(new Kalastajapeli(10,20), 4, 2, Suunta.ALAS);
+        Pala p = new Pala(7, 2);
+        boolean vastaus = k.osuu(p);
+        assertEquals(vastaus, true);
+    }
+    @Test
+    public void osuuPalauttaaTrueKunPalatOsuu2() {
+        Kalastaja k = new Kalastaja(new Kalastajapeli(10,20), 4, 2, Suunta.ALAS);
+        Pala p = new Pala(6, 3);
+        boolean vastaus = k.osuu(p);
+        assertEquals(vastaus, true);
+    }
+    @Test
+    public void osuuPalauttaaTrueKunPalatOsuu3() {
+        Kalastaja k = new Kalastaja(new Kalastajapeli(10,20), 4, 2, Suunta.ALAS);
+        Pala p = new Pala(7, 3);
+        boolean vastaus = k.osuu(p);
+        assertEquals(vastaus, true);
+    }
+    @Test
+    public void osuuPalauttaaTrueKunPalatOsuu4() {
+        Kalastaja k = new Kalastaja(new Kalastajapeli(10,20), 4, 2, Suunta.ALAS);
+        Pala p = new Pala(8, 3);
+        boolean vastaus = k.osuu(p);
+        assertEquals(vastaus, true);
+    }
+    @Test
     public void osuuPalauttaaTrueKunPalatOsuu() {
-        Kalastaja k = new Kalastaja(new Kalastajapeli(10,20), 1, 2, Suunta.ALAS);
-        Pala p = new Pala(3, 2);
+        Kalastaja k = new Kalastaja(new Kalastajapeli(10,20), 4, 2, Suunta.ALAS);
+        Pala p = new Pala(7, 4);
         boolean vastaus = k.osuu(p);
         assertEquals(vastaus, true);
     }
@@ -169,8 +190,26 @@ public class KalastajaTest {
     }
     
     @Test
-    public void kalastajaOsuuLaitaanPalauttaaTrue(){
+    public void kalastajaOsuuLaitaanPalauttaaTrueYMiinusYkkosella(){
         Kalastaja k = new Kalastaja(new Kalastajapeli(10,20), 1,-1, Suunta.ALAS);
+        boolean vastaus = k.kalastajaOsuuLaitaan();
+        assertEquals(vastaus, true);
+    }
+    @Test
+    public void kalastajaOsuuLaitaanPalauttaaTrueYMiinusKakkosella(){
+        Kalastaja k = new Kalastaja(new Kalastajapeli(10,20), 1,-2, Suunta.ALAS);
+        boolean vastaus = k.kalastajaOsuuLaitaan();
+        assertEquals(vastaus, true);
+    }
+    @Test
+    public void kalastajaOsuuLaitaanPalauttaaTrueYKorkeudella(){
+        Kalastaja k = new Kalastaja(new Kalastajapeli(10,20), 1,19, Suunta.ALAS);
+        boolean vastaus = k.kalastajaOsuuLaitaan();
+        assertEquals(vastaus, true);
+    }
+    @Test
+    public void kalastajaOsuuLaitaanPalauttaaTrueYYliKorkeudella(){
+        Kalastaja k = new Kalastaja(new Kalastajapeli(10,20), 1,21, Suunta.ALAS);
         boolean vastaus = k.kalastajaOsuuLaitaan();
         assertEquals(vastaus, true);
     }

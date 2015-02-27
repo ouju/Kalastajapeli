@@ -4,7 +4,7 @@ import kalastajapeli.kayttoliittyma.Kayttoliittyma;
 import kalastajapeli.peli.Kalastajapeli;
 
 /**
- * Luo pelin, käyttöliittymän ja kutsuu run-metodia
+ * Luo pelin ja käyttöliittymän
  *
  * @author Outi
  */

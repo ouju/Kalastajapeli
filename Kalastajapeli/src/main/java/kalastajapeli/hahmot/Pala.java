@@ -1,8 +1,7 @@
 package kalastajapeli.hahmot;
 
 /**
- * Luokka määrittää ja hakee palan sijainnin ja testaa osuuko kaksi palaa
- * toisiinsa
+ * Luokka määrittää ja hakee palan sijainnin
  *
  * @author Outi
  */
@@ -37,11 +36,7 @@ public class Pala {
     public int getY() {
         return y;
     }
-
-    /*public boolean osuu(Pala toinen) {
-        return x == toinen.x && y == toinen.y;
-    }
-*/
+    
     @Override
     public String toString() {
         return "(" + x + "," + y + ")";

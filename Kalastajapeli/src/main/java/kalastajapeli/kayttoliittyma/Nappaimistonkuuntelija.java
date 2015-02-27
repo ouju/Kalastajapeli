@@ -6,11 +6,21 @@ import kalastajapeli.hahmot.Kalastaja;
 import kalastajapeli.hahmot.Suunta;
 import kalastajapeli.peli.Kalastajapeli;
 
+/**
+ * Määrittää kalastajalle liikkumisen ylös ja alas painettaessa nuolinäppäimiä
+ *
+ * @author Outi
+ */
 public class Nappaimistonkuuntelija implements KeyListener {
 
     Kalastaja kalastaja;
     Kalastajapeli peli;
 
+    /**
+     *
+     * @param kalastaja
+     * @param peli
+     */
     public Nappaimistonkuuntelija(Kalastaja kalastaja, Kalastajapeli peli) {
         this.kalastaja = kalastaja;
         this.peli = peli;

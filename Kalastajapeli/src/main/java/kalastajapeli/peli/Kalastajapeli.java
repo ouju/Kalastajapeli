@@ -9,7 +9,8 @@ import kalastajapeli.hahmot.Suunta;
 
 /**
  * Luokka määrittää pelin päivittämisen, eli luo ja liikuttaa kaloja, kenkiä ja
- * kalastajaa sekä pitää laskua päivitysmääristä, pisteistä ja elämistä
+ * kalastajaa sekä pitää laskua päivitysmääristä, pisteistä, elämistä
+ * ja milloin kenkiä tulee luoda enemmän
  *
  * @author Outi
  */
@@ -23,13 +24,13 @@ public class Kalastajapeli {
     private int paivitysmaara;
     private int pisteet;
     private int sydamet;
-    private int i;
+    private int uusinta;
 
     /**
      * Konstruktori määrittää ikkunalle leveyden ja korkeuden ja muuttujat, luo
      * alas päin kulkevan kalastajan vasempaan yläkulmaan, määrittää alkuun
      * pistemääräksi nolla ja sydänmääräksi kolme ja alustaa kalat- ja
-     * kengät-listat
+     * kengät-listat ja uusinnoiksi yhdeksän
      *
      * @param leveys Peli-ikkunan leveys
      * @param korkeus Peli-kkunan korkeus
@@ -42,7 +43,7 @@ public class Kalastajapeli {
         this.korkeus = korkeus;
         this.pisteet = 0;
         this.sydamet = 3;
-        this.i = 9;
+        this.uusinta = 9;
 
         kalastaja = new Kalastaja(this, 1, 1, Suunta.ALAS);
     }
@@ -53,6 +54,13 @@ public class Kalastajapeli {
      */
     public int getSydamet() {
         return sydamet;
+    }
+    /**
+     *
+     * @return
+     */
+    public int getUusinta(){
+        return uusinta;
     }
 
     /**
@@ -81,15 +89,16 @@ public class Kalastajapeli {
 
     /**
      * Metodi luo uuden kengän ikkunan oikeaan laitaan, arpoo korkeuden ja
-     * määrittää suunnaksi vasen
+     * määrittää suunnaksi vasen. Vaikeuttaa peliä luodessa enemmän kenkiä
+     * päivitysmäärien ollessa jaollisia kuudellakymmenellä
      *
      */
     public void uusiKenka() {
 
-        if (paivitysmaara % 60 == 0 && i > 1) {
-            i--;
+        if (paivitysmaara % 60 == 0 && uusinta > 1) {
+            uusinta--;
         }
-        if (paivitysmaara % i == 0) {
+        if (paivitysmaara % uusinta == 0) {
             Random random = new Random();
             kengat.add(new Kenka(leveys, random.nextInt(korkeus), Suunta.VASEN));
         }
@@ -97,7 +106,7 @@ public class Kalastajapeli {
 
     /**
      * Metodi luo uuden kalan ikkunan oikeaan laitaan, arpoo korkeuden ja
-     * määrittää suunnaksi vasen
+     * määrittää suunnaksi vasen aina päivitysmäärän ollessa jaollinen viidellä
      *
      */
     public void uusiKala() {
